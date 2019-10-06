@@ -36,6 +36,7 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
     var adjPerc:String! = ""
     var top3:String! = ""
     var H2H:String! = ""
+    var rank:String! = ""
     
     var matchesModel = MatchesModel()
     
@@ -102,8 +103,22 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
         
         let cell = tableViewController.dequeueReusableCell(withIdentifier: "theseMatchesCell", for: indexPath)
         
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "MM/dd"
+        
+        var thismatchdate:String? = ""
+        
+        if let thisdate = dateFormatterGet.date(from: matches[indexPath.row].matchdate) {
+            thismatchdate = dateFormatterPrint.string(from: thisdate)
+        } else {
+            thismatchdate = ""
+        }
+        
         if matches[indexPath.row].matchresult == "For." {
-            cell.textLabel?.text = "Forfeit - " + matches[indexPath.row].losingschool
+            cell.textLabel?.text = thismatchdate! + ": Forfeit - " + matches[indexPath.row].losingschool
             cell.textLabel?.textColor = UIColor(red: 0.1059, green: 0.5882, blue: 0, alpha: 1.0)
         } else {
             
@@ -118,11 +133,11 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
             }
             
             if matches[indexPath.row].Result == "Win" {
-                cell.textLabel?.text = matches[indexPath.row].loser + ", " + matches[indexPath.row].losingschool + ": " + thisScore + "%" + " - " + matches[indexPath.row].matchresult
+                cell.textLabel?.text = thismatchdate! + ": " + matches[indexPath.row].loser + ", " + matches[indexPath.row].losingschool + "(" + thisScore + "%)" + " - " + matches[indexPath.row].matchresult
                 cell.textLabel?.textColor = UIColor(red: 0.1059, green: 0.5882, blue: 0, alpha: 1.0)
                 
             } else {
-                cell.textLabel?.text = matches[indexPath.row].winner + ", " + matches[indexPath.row].winningschool + ": " + thisScore + "%" + " - " + matches[indexPath.row].matchresult
+                cell.textLabel?.text = thismatchdate! + ": " + matches[indexPath.row].winner + ", " + matches[indexPath.row].winningschool + " (" + thisScore + "%)" + " - " + matches[indexPath.row].matchresult
                 cell.textLabel?.textColor = UIColor.red
             }
         }

@@ -99,37 +99,6 @@
             </objects>
             <point key="canvasLocation" x="1711" y="108"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="frd-yb-Swg">
-            <objects>
-                <tableViewController id="1iW-d7-LU9" customClass="TableViewController" customModule="RankWrestlersApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MWM-CB-zCq">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="theseMatchesCell" id="dUx-Uq-AXW">
-                                <rect key="frame" x="0.0" y="28" width="667" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dUx-Uq-AXW" id="Qi5-S3-bPX">
-                                    <rect key="frame" x="0.0" y="0.0" width="667" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="1iW-d7-LU9" id="pA7-mn-Jny"/>
-                            <outlet property="delegate" destination="1iW-d7-LU9" id="Hej-4D-65K"/>
-                        </connections>
-                    </tableView>
-                    <connections>
-                        <outlet property="tableViewController" destination="MWM-CB-zCq" id="8e5-9s-tZ2"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jSh-po-vDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3179" y="108"/>
-        </scene>
         <!--Profile View Controller-->
         <scene sceneID="P4x-3Y-F7M">
             <objects>

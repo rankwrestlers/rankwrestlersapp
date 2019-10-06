@@ -70,7 +70,7 @@ class TableViewController: UIViewController, MatchesModelDelegate, UITableViewDa
         let cell = tableViewController.dequeueReusableCell(withIdentifier: "theseMatchesCell", for: indexPath)
  
         if matches[indexPath.row].matchresult == "For." {
-            cell.textLabel?.text = "Forfeit - " + matches[indexPath.row].losingschool
+            cell.textLabel?.text = "Testing - " + matches[indexPath.row].losingschool
             cell.textLabel?.textColor = UIColor(red: 0.1059, green: 0.5882, blue: 0, alpha: 1.0)
         } else {
             

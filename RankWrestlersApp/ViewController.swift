@@ -46,6 +46,7 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
         info.Wins = winsToSend
         info.Losses = lossesToSend
         info.weightClass = weightClassToSend + " lbs"
+        info.rank = rankToSend
         
      }
     
@@ -83,6 +84,7 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
     var h2hToSend: String = ""
     var threeBestToSend: String = ""
     var gradeToSend: String = ""
+    var rankToSend: String = ""
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -95,8 +97,9 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
         lossesToSend = locations[indexPath.row].Losses
         totalScoreToSend = locations[indexPath.row].Combo
         adjPercToSend = locations[indexPath.row].AdjPerc
-        h2hToSend = locations[indexPath.row].H2H
         threeBestToSend = locations[indexPath.row].ThreeBest
+        h2hToSend = locations[indexPath.row].H2H
+        rankToSend = locations[indexPath.row].rank
         
         self.performSegue(withIdentifier: "GoToMatches", sender: self)
         

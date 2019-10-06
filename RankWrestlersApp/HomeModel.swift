@@ -58,7 +58,7 @@ class HomeModel: NSObject {
                 
                 let jsonDict = jsonResult as! [String:String]
                 
-                let loc = Location(wrestler: jsonDict["wrestler"]!, wrestlername: jsonDict["wrestlername"]!, school: jsonDict["school"]!, grade: jsonDict["grade"]!, rankweight: jsonDict["rankweight"]!, Wins: jsonDict["Wins"]!, Losses: jsonDict["Losses"]!, Combo: jsonDict["Combo"]!, rank: jsonDict["rank"]!)
+                let loc = Location(wrestler: jsonDict["wrestler"]!, wrestlername: jsonDict["wrestlername"]!, school: jsonDict["school"]!, grade: jsonDict["grade"]!, rankweight: jsonDict["rankweight"]!, Wins: jsonDict["Wins"]!, Losses: jsonDict["Losses"]!, Combo: jsonDict["Combo"]!, AdjPerc:jsonDict["AdjPerc"]!, ThreeBest:jsonDict["ThreeBest"]!, H2H: jsonDict["H2H"]!, rank: jsonDict["rank"]!)
                 locArray.append(loc)
             }
             

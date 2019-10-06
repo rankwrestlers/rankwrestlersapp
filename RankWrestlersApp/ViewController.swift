@@ -34,9 +34,15 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let info = segue.destination as! TableViewController
+        let info = segue.destination as! ProfileViewController
         info.myString = textToSend
         info.wrestlerName = wrestlerNameToSend
+        info.schoolName = schoolNameToSend
+        info.totalScore = totalScoreToSend
+        info.adjPerc = adjPercToSend
+        info.h2h = h2hToSend
+        info.top3 = threeBestToSend
+        info.weightClass = weightClassToSend + " lbs"
         
      }
     
@@ -65,11 +71,26 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
     
     var textToSend: String = ""
     var wrestlerNameToSend: String = ""
+    var schoolNameToSend: String = ""
+    var weightClassToSend: String = ""
+    var recordToSend: String = ""
+    var totalScoreToSend: String = ""
+    var adjPercToSend: String = ""
+    var h2hToSend: String = ""
+    var threeBestToSend: String = ""
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         textToSend = locations[indexPath.row].wrestler
         wrestlerNameToSend = locations[indexPath.row].wrestlername
+        schoolNameToSend = locations[indexPath.row].school
+        weightClassToSend = locations[indexPath.row].rankweight
+        recordToSend = locations[indexPath.row].Wins + "-" + locations[indexPath.row].Losses
+        totalScoreToSend = locations[indexPath.row].Combo
+        adjPercToSend = locations[indexPath.row].AdjPerc
+        h2hToSend = locations[indexPath.row].H2H
+        threeBestToSend = locations[indexPath.row].ThreeBest
+        
         self.performSegue(withIdentifier: "GoToMatches", sender: self)
         
     }

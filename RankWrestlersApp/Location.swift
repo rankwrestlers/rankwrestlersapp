@@ -18,6 +18,9 @@ struct Location {
     var Wins = ""
     var Losses = ""
     var Combo = ""
+    var AdjPerc = ""
+    var ThreeBest = ""
+    var H2H = ""
     var rank = ""
-    
+
 }

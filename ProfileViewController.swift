@@ -26,6 +26,13 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
     
     var myString:String? = ""
     var wrestlerName:String? = ""
+    var schoolName:String? = ""
+    var weightClass:String? = ""
+    var totalScore:String? = ""
+    var record:String? = ""
+    var adjPerc:String? = ""
+    var top3:String? = ""
+    var h2h:String? = ""
     
     
     
@@ -44,7 +51,15 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
         
         matchesModel.getItems(myString!)
         matchesModel.getItems(wrestlerName!)
+        matchesModel.getItems(schoolName!)
+        matchesModel.getItems(weightClass!)
         matchesModel.delegate = self
+        wrestlerNameLabel.text = wrestlerName
+        schoolNameLabel.text = schoolName
+        weightClassLabel.text = weightClass
+        totalScoreLabel.text = totalScore
+        print(schoolName!)
+    
         
         
     }
@@ -66,7 +81,7 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
     
     func tableView(_ tableViewController: UITableView, titleForHeaderInSection section:Int) -> String?
     {
-        return wrestlerName! + " Matches"
+        return "Recent Matches:"
     }
     
     

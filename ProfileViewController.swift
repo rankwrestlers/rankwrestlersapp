@@ -28,12 +28,14 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
     var myString:String? = ""
     var wrestlerName:String? = ""
     var schoolName:String? = ""
+    var grade:String? = ""
     var weightClass:String? = ""
     var totalScore:String! = ""
-    var record:String? = ""
-    var adjPerc:String? = ""
-    var top3:String? = ""
-    var h2h:String? = ""
+    var Wins:String! = ""
+    var Losses:String! = ""
+    var adjPerc:String! = ""
+    var top3:String! = ""
+    var H2H:String! = ""
     
     var matchesModel = MatchesModel()
     
@@ -45,7 +47,8 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
  
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .percent
-        numberFormatter.maximumFractionDigits = 2
+        numberFormatter.minimumFractionDigits = 1
+        numberFormatter.maximumFractionDigits = 1
 
         profileViewController.delegate = self
         profileViewController.dataSource = self
@@ -53,17 +56,21 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
         profileViewController.rowHeight = UITableView.automaticDimension
         
         matchesModel.getItems(myString!)
-        matchesModel.getItems(wrestlerName!)
-        matchesModel.getItems(schoolName!)
-        matchesModel.getItems(weightClass!)
+
         matchesModel.delegate = self
         wrestlerNameLabel.text = wrestlerName
         schoolNameLabel.text = schoolName
-        weightClassLabel.text = weightClass
-        
+        weightClassLabel.text = weightClass! + " (" + grade! + ")"
+        recordLabel.text = Wins + "-" + Losses
         let thisTotalScore = Double(totalScore)
         totalScoreLabel.text = numberFormatter.string(from: thisTotalScore! as NSNumber)
-        
+        let thisAdjPerc = Double(adjPerc)
+        adjPercLabel.text = numberFormatter.string(from: thisAdjPerc! as NSNumber)
+        let thisH2H = Double(H2H)
+        adjPercLabel.text = numberFormatter.string(from: thisH2H! as NSNumber)
+        let thisTop3 = Double(top3)
+        top3Label.text = numberFormatter.string(from: thisTop3! as NSNumber)
+
     }
     
     func ItemsDownloaded(matches: [Match]) {

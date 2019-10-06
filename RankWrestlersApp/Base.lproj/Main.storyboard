@@ -146,16 +146,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jHv-BB-AgC">
-                                <rect key="frame" x="20" y="65" width="338" height="49"/>
+                                <rect key="frame" x="20" y="65" width="196" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N6V-Xq-qRX">
-                                        <rect key="frame" x="0.0" y="0.0" width="244" height="49"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="102" height="49"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGw-8V-HXt">
-                                                <rect key="frame" x="0.0" y="0.0" width="244" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="102" height="20.5"/>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="Westminster Christian Academy">
+                                                    <fragment content="School Name">
                                                         <attributes>
                                                             <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -166,7 +166,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="152 Pounds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6c-nV-U23">
-                                                <rect key="frame" x="77.5" y="28.5" width="89.5" height="20.5"/>
+                                                <rect key="frame" x="6.5" y="28.5" width="89.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -174,7 +174,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="8VD-WM-TEH">
-                                        <rect key="frame" x="252" y="0.0" width="86" height="49"/>
+                                        <rect key="frame" x="110" y="0.0" width="86" height="49"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tey-py-NqU">
                                                 <rect key="frame" x="0.0" y="0.0" width="86" height="21.5"/>

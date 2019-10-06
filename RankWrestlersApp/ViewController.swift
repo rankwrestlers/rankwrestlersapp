@@ -38,10 +38,13 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
         info.myString = textToSend
         info.wrestlerName = wrestlerNameToSend
         info.schoolName = schoolNameToSend
+        info.grade = gradeToSend
         info.totalScore = totalScoreToSend
         info.adjPerc = adjPercToSend
-        info.h2h = h2hToSend
+        info.H2H = h2hToSend
         info.top3 = threeBestToSend
+        info.Wins = winsToSend
+        info.Losses = lossesToSend
         info.weightClass = weightClassToSend + " lbs"
         
      }
@@ -73,19 +76,23 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
     var wrestlerNameToSend: String = ""
     var schoolNameToSend: String = ""
     var weightClassToSend: String = ""
-    var recordToSend: String = ""
+    var winsToSend: String = ""
+    var lossesToSend: String = ""
     var totalScoreToSend: String = ""
     var adjPercToSend: String = ""
     var h2hToSend: String = ""
     var threeBestToSend: String = ""
+    var gradeToSend: String = ""
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         textToSend = locations[indexPath.row].wrestler
         wrestlerNameToSend = locations[indexPath.row].wrestlername
         schoolNameToSend = locations[indexPath.row].school
+        gradeToSend = locations[indexPath.row].grade
         weightClassToSend = locations[indexPath.row].rankweight
-        recordToSend = locations[indexPath.row].Wins + "-" + locations[indexPath.row].Losses
+        winsToSend = locations[indexPath.row].Wins
+        lossesToSend = locations[indexPath.row].Losses
         totalScoreToSend = locations[indexPath.row].Combo
         adjPercToSend = locations[indexPath.row].AdjPerc
         h2hToSend = locations[indexPath.row].H2H

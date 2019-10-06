@@ -60,7 +60,7 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
  
     func tableView(_ tableView: UITableView, titleForHeaderInSection section:Int) -> String?
     {
-        return "Roster (Record): Total Score (Grade)"
+        return "Wrestlers Following"
     }
     
     var textToSend: String = ""

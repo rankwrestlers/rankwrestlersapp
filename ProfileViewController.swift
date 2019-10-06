@@ -6,6 +6,7 @@
 //  Copyright © 2019 RankWresters. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class ProfileViewController: UIViewController, MatchesModelDelegate, UITableViewDataSource, UITableViewDelegate {
@@ -28,13 +29,11 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
     var wrestlerName:String? = ""
     var schoolName:String? = ""
     var weightClass:String? = ""
-    var totalScore:String? = ""
+    var totalScore:String! = ""
     var record:String? = ""
     var adjPerc:String? = ""
     var top3:String? = ""
     var h2h:String? = ""
-    
-    
     
     var matchesModel = MatchesModel()
     
@@ -43,7 +42,11 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+ 
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .percent
+        numberFormatter.maximumFractionDigits = 2
+
         profileViewController.delegate = self
         profileViewController.dataSource = self
         profileViewController.estimatedRowHeight = 20
@@ -57,10 +60,9 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
         wrestlerNameLabel.text = wrestlerName
         schoolNameLabel.text = schoolName
         weightClassLabel.text = weightClass
-        totalScoreLabel.text = totalScore
-        print(schoolName!)
-    
         
+        let thisTotalScore = Double(totalScore)
+        totalScoreLabel.text = numberFormatter.string(from: thisTotalScore! as NSNumber)
         
     }
     
@@ -100,20 +102,20 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
             
             let num = Double(matches[indexPath.row].AdjPerc) ?? 0
             
-            var totalScore: String = ""
+            var thisScore: String = ""
             
             if num > 0 {
-                totalScore = String(round(Double(matches[indexPath.row].AdjPerc)!*1000)/10)
+                thisScore = String(round(Double(matches[indexPath.row].AdjPerc)!*1000)/10)
             } else {
-                totalScore = "0"
+                thisScore = "0"
             }
             
             if matches[indexPath.row].Result == "Win" {
-                cell.textLabel?.text = matches[indexPath.row].loser + ", " + matches[indexPath.row].losingschool + ": " + totalScore + "%" + " - " + matches[indexPath.row].matchresult
+                cell.textLabel?.text = matches[indexPath.row].loser + ", " + matches[indexPath.row].losingschool + ": " + thisScore + "%" + " - " + matches[indexPath.row].matchresult
                 cell.textLabel?.textColor = UIColor(red: 0.1059, green: 0.5882, blue: 0, alpha: 1.0)
                 
             } else {
-                cell.textLabel?.text = matches[indexPath.row].winner + ", " + matches[indexPath.row].winningschool + ": " + totalScore + "%" + " - " + matches[indexPath.row].matchresult
+                cell.textLabel?.text = matches[indexPath.row].winner + ", " + matches[indexPath.row].winningschool + ": " + thisScore + "%" + " - " + matches[indexPath.row].matchresult
                 cell.textLabel?.textColor = UIColor.red
             }
         }

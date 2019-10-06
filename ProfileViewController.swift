@@ -22,6 +22,7 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
     @IBOutlet weak var adjPercLabel: UILabel!
     @IBOutlet weak var top3Label: UILabel!
     @IBOutlet weak var h2hLabel: UILabel!
+    @IBOutlet weak var rankLabel: UILabel!
     
     var wrestlerId:Location?
     
@@ -68,9 +69,10 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
         let thisAdjPerc = Double(adjPerc)
         adjPercLabel.text = numberFormatter.string(from: thisAdjPerc! as NSNumber)
         let thisH2H = Double(H2H)
-        adjPercLabel.text = numberFormatter.string(from: thisH2H! as NSNumber)
+        h2hLabel.text = numberFormatter.string(from: thisH2H! as NSNumber)
         let thisTop3 = Double(top3)
         top3Label.text = numberFormatter.string(from: thisTop3! as NSNumber)
+        rankLabel.text = "#" + rank
 
     }
     
@@ -107,7 +109,7 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
         dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
         let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "MM/dd"
+        dateFormatterPrint.dateFormat = "M/d"
         
         var thismatchdate:String? = ""
         

@@ -61,6 +61,9 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
 
         matchesModel.delegate = self
         wrestlerNameLabel.text = wrestlerName
+        let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue]
+        let underlineAttributedString = NSAttributedString(string: (schoolName)!, attributes: underlineAttribute)
+        schoolNameLabel.attributedText = underlineAttributedString
         schoolNameLabel.text = schoolName
         weightClassLabel.text = weightClass! + " (" + grade! + ")"
         recordLabel.text = Wins + "-" + Losses
@@ -135,12 +138,13 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
             }
             
             if matches[indexPath.row].Result == "Win" {
-                cell.textLabel?.text = thismatchdate! + ": " + matches[indexPath.row].loser + ", " + matches[indexPath.row].losingschool + "(" + thisScore + "%)" + " - " + matches[indexPath.row].matchresult
+                cell.textLabel?.text = thismatchdate! + ": " + matches[indexPath.row].loser + ", " + matches[indexPath.row].losingschool + " (" + thisScore + "%)" + " - " + matches[indexPath.row].matchresult
                 cell.textLabel?.textColor = UIColor(red: 0.1059, green: 0.5882, blue: 0, alpha: 1.0)
-                
+                cell.textLabel?.numberOfLines = 0
             } else {
                 cell.textLabel?.text = thismatchdate! + ": " + matches[indexPath.row].winner + ", " + matches[indexPath.row].winningschool + " (" + thisScore + "%)" + " - " + matches[indexPath.row].matchresult
                 cell.textLabel?.textColor = UIColor.red
+                cell.textLabel?.numberOfLines = 0
             }
         }
         

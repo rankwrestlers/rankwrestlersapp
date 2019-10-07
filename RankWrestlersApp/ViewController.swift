@@ -63,7 +63,7 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
         let totalScore = round(Double(locations[indexPath.row].Combo)!*1000)/10
         
         cell.textLabel?.text = locations[indexPath.row].wrestlername + ", " + locations[indexPath.row].school + " (" + String(totalScore) + "%)"
-        
+        cell.textLabel?.numberOfLines = 0
         return cell
         
     }

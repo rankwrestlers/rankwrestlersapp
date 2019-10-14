@@ -21,5 +21,113 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D009758-87BD-45D7-97F3-E962E5E5CB05"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "ProfileViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "7D009758-87BD-45D7-97F3-E962E5E5CB05 - 3f6ef9c51d3c1427"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RankWrestlersApp.ProfileViewController.myString.getter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "RankWrestlersApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rankwrestlers/Desktop/RankWrestlersApp/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "131">
+               </Location>
+               <Location
+                  uuid = "7D009758-87BD-45D7-97F3-E962E5E5CB05 - 358efd36ec2aa3d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RankWrestlersApp.ProfileViewController.myString.setter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "RankWrestlersApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rankwrestlers/Desktop/RankWrestlersApp/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "153">
+               </Location>
+               <Location
+                  uuid = "7D009758-87BD-45D7-97F3-E962E5E5CB05 - 5d9672c363abb022"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RankWrestlersApp.ProfileViewController.myString.modify : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "RankWrestlersApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rankwrestlers/Desktop/RankWrestlersApp/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "7D009758-87BD-45D7-97F3-E962E5E5CB05 - 42ec54ad39d88c92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RankWrestlersApp.ProfileViewController.myString.modify : Swift.Optional&lt;Swift.String&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "RankWrestlersApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rankwrestlers/Desktop/RankWrestlersApp/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "7D009758-87BD-45D7-97F3-E962E5E5CB05 - 505661bbf6c5c4a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RankWrestlersApp.ProfileViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; RankWrestlersApp.ProfileViewController"
+                  moduleName = "RankWrestlersApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rankwrestlers/Desktop/RankWrestlersApp/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1524">
+               </Location>
+               <Location
+                  uuid = "7D009758-87BD-45D7-97F3-E962E5E5CB05 - afde8d9e3199c4ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RankWrestlersApp.ProfileViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;RankWrestlersApp.ProfileViewController&gt;"
+                  moduleName = "RankWrestlersApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rankwrestlers/Desktop/RankWrestlersApp/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1456">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

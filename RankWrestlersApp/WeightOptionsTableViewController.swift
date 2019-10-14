@@ -15,7 +15,9 @@ struct cellData {
 }
 
 class WeightOptionsTableViewController: UITableViewController {
-
+    
+    @IBOutlet var weightTableView: UITableView!
+    
     var tableViewData = [cellData]()
     
     override func viewDidLoad() {
@@ -81,6 +83,16 @@ class WeightOptionsTableViewController: UITableViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let info = segue.destination as! RankDetailViewController
+        info.weight = weightToSend
+        info.classname = classToSend
+        
+     }
+    
+    var weightToSend: String = ""
+    var classToSend: String = ""
 
     override func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath){
         if indexPath.row == 0 {
@@ -98,8 +110,11 @@ class WeightOptionsTableViewController: UITableViewController {
 
             }
         
-        } // program else to handle if row is clicked
-        
+        } else {
+        classToSend = tableViewData[indexPath.section].title
+        weightToSend = tableViewData[indexPath.section].sectionData[indexPath.row - 1]
+        self.performSegue(withIdentifier: "rankDetailView", sender: self)
+        }
     }
 
 }

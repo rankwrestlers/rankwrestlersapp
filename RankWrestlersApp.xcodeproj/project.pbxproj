@@ -23,6 +23,7 @@
 		39DD7155231F12D400AD17EF /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD7154231F12D400AD17EF /* Team.swift */; };
 		39DD71BD2321880C00AD17EF /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD71BC2321880C00AD17EF /* TeamModel.swift */; };
 		39DE2F672353BF710007F31A /* RankingsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE2F662353BF710007F31A /* RankingsHomeViewController.swift */; };
+		39DE2F6D2354139D0007F31A /* RankDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE2F6C2354139D0007F31A /* RankDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		39DD7154231F12D400AD17EF /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		39DD71BC2321880C00AD17EF /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
 		39DE2F662353BF710007F31A /* RankingsHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsHomeViewController.swift; sourceTree = "<group>"; };
+		39DE2F6C2354139D0007F31A /* RankDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				39909FEB2352CE5500B53DD6 /* RankOptionsTableViewController.swift */,
 				39DE2F662353BF710007F31A /* RankingsHomeViewController.swift */,
 				39909FED2352CF3000B53DD6 /* WeightOptionsTableViewController.swift */,
+				39DE2F6C2354139D0007F31A /* RankDetailViewController.swift */,
 				39DD7134231CCBF200AD17EF /* Main.storyboard */,
 				39DD7137231CCBF600AD17EF /* Assets.xcassets */,
 				39DD713C231CCBF600AD17EF /* Info.plist */,
@@ -180,6 +183,7 @@
 				39DD71BD2321880C00AD17EF /* TeamModel.swift in Sources */,
 				39DD7145231CCF8100AD17EF /* HomeModel.swift in Sources */,
 				39DD7155231F12D400AD17EF /* Team.swift in Sources */,
+				39DE2F6D2354139D0007F31A /* RankDetailViewController.swift in Sources */,
 				39DD714F231DDD1600AD17EF /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

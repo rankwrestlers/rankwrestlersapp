@@ -167,10 +167,42 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="ec5-zV-pI2"/>
+                    <connections>
+                        <outlet property="weightTableView" destination="RDm-d2-UUJ" id="Ozi-AF-3aY"/>
+                        <segue destination="EGz-8T-sO0" kind="show" identifier="rankDetailView" id="1zD-pv-xs2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3u-3r-PrS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3828" y="936.88155922038993"/>
+        </scene>
+        <!--Rank Detail View Controller-->
+        <scene sceneID="yC4-sL-mrR">
+            <objects>
+                <viewController id="EGz-8T-sO0" customClass="RankDetailViewController" customModule="RankWrestlersApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1HF-jy-4g2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iho-0i-5xy">
+                                <rect key="frame" x="54" y="150" width="275" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="fC2-oK-fAn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N0R-MV-sPH"/>
+                    <connections>
+                        <outlet property="rankDetailLabel" destination="Iho-0i-5xy" id="Ug8-xs-zv2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qyv-Zj-O3F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4645.6000000000004" y="936.88155922038993"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="P4x-3Y-F7M">

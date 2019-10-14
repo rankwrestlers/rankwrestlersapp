@@ -64,6 +64,24 @@ class RankDetailViewController: UIViewController,RankingsModelDelegate, UITableV
     
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      
+      let info = segue.destination as! ProfileViewController
+      info.myString = textToSend
+      info.wrestlerName = wrestlerNameToSend
+      info.schoolName = schoolNameToSend
+      info.grade = gradeToSend
+      info.totalScore = totalScoreToSend
+      info.adjPerc = adjPercToSend
+      info.H2H = h2hToSend
+      info.top3 = threeBestToSend
+      info.Wins = winsToSend
+      info.Losses = lossesToSend
+      info.weightClass = weightClassToSend + " lbs"
+      info.rank = rankToSend
+      
+   }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
@@ -82,7 +100,36 @@ class RankDetailViewController: UIViewController,RankingsModelDelegate, UITableV
         cell.textLabel?.text = "#" + String(indexPath.row + 1) + " - " + rankings[indexPath.row].wrestlername + " (" + rankings[indexPath.row].school + "): " + thisScore + "%"
         return cell
     }
-        
+
+    var textToSend: String = ""
+    var wrestlerNameToSend: String = ""
+    var schoolNameToSend: String = ""
+    var weightClassToSend: String = ""
+    var winsToSend: String = ""
+    var lossesToSend: String = ""
+    var totalScoreToSend: String = ""
+    var adjPercToSend: String = ""
+    var h2hToSend: String = ""
+    var threeBestToSend: String = ""
+    var gradeToSend: String = ""
+    var rankToSend: String = ""
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        textToSend = rankings[indexPath.row].wrestler
+        wrestlerNameToSend = rankings[indexPath.row].wrestlername
+        schoolNameToSend = rankings[indexPath.row].school
+        gradeToSend = rankings[indexPath.row].grade
+        weightClassToSend = rankings[indexPath.row].rankweight
+        winsToSend = rankings[indexPath.row].Wins
+        lossesToSend = rankings[indexPath.row].Losses
+        totalScoreToSend = rankings[indexPath.row].Combo
+        adjPercToSend = rankings[indexPath.row].AdjPerc
+        threeBestToSend = rankings[indexPath.row].ThreeBest
+        h2hToSend = rankings[indexPath.row].H2H
+        rankToSend = rankings[indexPath.row].rank
+        
+        self.performSegue(withIdentifier: "showProfile", sender: self)
+        
+    }
 
 }

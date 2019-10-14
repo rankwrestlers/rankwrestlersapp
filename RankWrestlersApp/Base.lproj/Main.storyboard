@@ -8,50 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Teams View Controller-->
-        <scene sceneID="lTe-jQ-gDa">
-            <objects>
-                <viewController id="wGl-Wu-qc7" customClass="TeamsViewController" customModule="RankWrestlersApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4sd-Ra-jeT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BZ3-1k-dwd">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamsCell" id="5M5-aH-6ag">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5M5-aH-6ag" id="xfE-MP-wHP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="delegate" destination="wGl-Wu-qc7" id="AJg-Uh-dK2"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="BZ3-1k-dwd" firstAttribute="leading" secondItem="Eta-7v-yMs" secondAttribute="leading" id="SMd-rj-SFC"/>
-                            <constraint firstItem="Eta-7v-yMs" firstAttribute="bottom" secondItem="BZ3-1k-dwd" secondAttribute="bottom" id="kRS-Ge-Ui3"/>
-                            <constraint firstItem="BZ3-1k-dwd" firstAttribute="top" secondItem="Eta-7v-yMs" secondAttribute="top" id="xFq-9E-lx1"/>
-                            <constraint firstItem="Eta-7v-yMs" firstAttribute="trailing" secondItem="BZ3-1k-dwd" secondAttribute="trailing" id="xSp-lD-TJ6"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Eta-7v-yMs"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="pm6-dR-t7w"/>
-                    <connections>
-                        <outlet property="teamView" destination="BZ3-1k-dwd" id="XQc-gj-NOG"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pYZ-sE-fxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="22703.200000000001" y="-285.60719640179911"/>
-        </scene>
         <!--Following List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -141,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gv9-iB-NuJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3063.1999999999998" y="936.88155922038993"/>
+            <point key="canvasLocation" x="4002.4000000000001" y="936.88155922038993"/>
         </scene>
         <!--Weight Options Table View Controller-->
         <scene sceneID="YOs-oj-LAL">
@@ -174,7 +130,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3u-3r-PrS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3828" y="936.88155922038993"/>
+            <point key="canvasLocation" x="4767.1999999999998" y="936.88155922038993"/>
         </scene>
         <!--Rank Detail View Controller-->
         <scene sceneID="yC4-sL-mrR">
@@ -497,19 +453,60 @@
         <!--Rosters-->
         <scene sceneID="NAC-ch-uyg">
             <objects>
-                <viewController id="Kzf-Qz-CKb" sceneMemberID="viewController">
+                <viewController title="Rosters" id="Kzf-Qz-CKb" customClass="TeamsViewController" customModule="RankWrestlersApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b0W-hl-bIK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teams" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sU-jo-ZDb">
+                                <rect key="frame" x="16" y="44" width="343" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="eNz-k1-cCG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4oC-jh-llg">
+                                <rect key="frame" x="0.0" y="83" width="375" height="584"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="teamsCell" id="W1m-7J-6mV">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W1m-7J-6mV" id="zSA-d4-l1Q">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Kzf-Qz-CKb" id="DlT-Dk-OV7"/>
+                                    <outlet property="delegate" destination="Kzf-Qz-CKb" id="cEa-FG-oJS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4oC-jh-llg" firstAttribute="leading" secondItem="aNM-3d-0Z5" secondAttribute="leading" id="3KY-qd-9Hu"/>
+                            <constraint firstItem="4oC-jh-llg" firstAttribute="trailing" secondItem="aNM-3d-0Z5" secondAttribute="trailing" id="7L3-j1-CP9"/>
+                            <constraint firstItem="4oC-jh-llg" firstAttribute="top" secondItem="5sU-jo-ZDb" secondAttribute="bottom" constant="8" id="d6W-hL-M34"/>
+                            <constraint firstItem="5sU-jo-ZDb" firstAttribute="leading" secondItem="aNM-3d-0Z5" secondAttribute="leading" constant="16" id="kDs-PY-sSQ"/>
+                            <constraint firstItem="aNM-3d-0Z5" firstAttribute="trailing" secondItem="5sU-jo-ZDb" secondAttribute="trailing" constant="16" id="tFw-mq-Atb"/>
+                            <constraint firstItem="5sU-jo-ZDb" firstAttribute="top" secondItem="aNM-3d-0Z5" secondAttribute="top" id="w8B-dM-RNn"/>
+                            <constraint firstAttribute="bottom" secondItem="4oC-jh-llg" secondAttribute="bottom" id="xk7-M2-79b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aNM-3d-0Z5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Rosters" image="icons8-list-24" id="I7J-sD-Sh0"/>
+                    <navigationItem key="navigationItem" id="hHw-N8-6qI"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="teamsViewController" destination="4oC-jh-llg" id="mpa-FC-cNn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e32-d6-S90" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="911"/>
+            <point key="canvasLocation" x="788" y="1700.5997001499252"/>
         </scene>
         <!--MainTabBar-->
         <scene sceneID="5SP-60-EfA">
@@ -523,7 +520,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="3R6-PS-8Ba" kind="relationship" relationship="viewControllers" id="JhP-Iy-wuq"/>
-                        <segue destination="Kzf-Qz-CKb" kind="relationship" relationship="viewControllers" id="MDU-hz-msr"/>
+                        <segue destination="Dut-zq-wdv" kind="relationship" relationship="viewControllers" id="MDU-hz-msr"/>
                         <segue destination="jJ9-Fl-BRS" kind="relationship" relationship="viewControllers" id="ypO-mS-lkg"/>
                     </connections>
                 </tabBarController>
@@ -548,7 +545,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrs-6e-eyw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2124" y="936.88155922038993"/>
+            <point key="canvasLocation" x="3063.1999999999998" y="936.88155922038993"/>
+        </scene>
+        <!--Rosters-->
+        <scene sceneID="F03-hO-DiG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dut-zq-wdv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Rosters" image="icons8-list-24" id="I7J-sD-Sh0"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A6A-1M-65X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kzf-Qz-CKb" kind="relationship" relationship="rootViewController" id="4QQ-En-2HQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kxj-z7-yY5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="910.79460269865069"/>
         </scene>
     </scenes>
     <resources>

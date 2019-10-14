@@ -1,10 +1,12 @@
 //
-//  HomeModel.swift
-//  mySQL Demo App
+//  TeamsModel.swift
+//  RankWrestlersApp
 //
-//  Created by RankWresters on 8/29/19.
+//  Created by RankWresters on 10/14/19.
 //  Copyright © 2019 RankWresters. All rights reserved.
 //
+
+import Foundation
 
 import UIKit
 
@@ -18,12 +20,10 @@ class TeamsModel: NSObject {
     
     var delegate:TeamsModelDelegate?
     
-    var rankState: String = ""
-    
-    func getItems() {
+    func getItems(_ rankstate:String) {
         
-        let serviceURL = "https://RankWrestlers.com/teams.php"
-        
+        let serviceURL = "https://RankWrestlers.com/teamsapp.php?rankState=" + rankstate
+        print (serviceURL)
         let url = URL(string: serviceURL)
         
         if let url = url {
@@ -59,10 +59,11 @@ class TeamsModel: NSObject {
             for jsonResult in jsonArray{
                 
                 let jsonDict = jsonResult as! [String:String]
- 
-                let team = Team(school: jsonDict["school"]!, thisclass: jsonDict["class"]!)
                 
-                teamArray.append(team)
+                let team = Team(school: jsonDict["school"]!, rankclass: jsonDict["class"]!)
+                
+                    print(team)
+                    teamArray.append(team)
             }
             
             DispatchQueue.main.async {

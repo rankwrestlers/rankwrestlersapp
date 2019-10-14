@@ -1,5 +1,5 @@
 //
-//  Team.swift
+//  RostersModel.swift
 //  RankWrestlersApp
 //
 //  Created by RankWresters on 10/14/19.
@@ -7,9 +7,5 @@
 //
 
 import Foundation
-struct Team {
-    
-    var school = ""
-    var rankclass = ""
+import UIKit
 
-}

@@ -37,7 +37,7 @@ class RankDetailViewController: UIViewController,RankingsModelDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        rankDetailLabel.text = classname! + ": " + weight!
+        rankDetailLabel.text = weight! + " Pounds - Class " + rankclass!
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .percent
         numberFormatter.minimumFractionDigits = 1
@@ -60,7 +60,6 @@ class RankDetailViewController: UIViewController,RankingsModelDelegate, UITableV
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        print (rankings.count)
         return rankings.count
     
     }
@@ -71,7 +70,16 @@ class RankDetailViewController: UIViewController,RankingsModelDelegate, UITableV
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "rankDetailCell", for: indexPath)
-        cell.textLabel?.text = String(indexPath.row + 1) + ": " + rankings[indexPath.row].wrestlername + " (" + rankings[indexPath.row].school + ")"
+        let num = Double(rankings[indexPath.row].Combo) ?? 0
+        
+        var thisScore: String = ""
+        
+        if num > 0 {
+            thisScore = String(round(Double(rankings[indexPath.row].Combo)!*1000)/10)
+        } else {
+            thisScore = "0"
+        }
+        cell.textLabel?.text = "#" + String(indexPath.row + 1) + " - " + rankings[indexPath.row].wrestlername + " (" + rankings[indexPath.row].school + "): " + thisScore + "%"
         return cell
     }
         

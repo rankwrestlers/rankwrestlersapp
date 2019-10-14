@@ -226,11 +226,12 @@
                     <connections>
                         <outlet property="rankDetailLabel" destination="Iho-0i-5xy" id="Ug8-xs-zv2"/>
                         <outlet property="rankDetailTableView" destination="ywk-N3-TgA" id="3Jd-2m-omt"/>
+                        <segue destination="1jf-vO-0jk" kind="show" identifier="showProfile" id="1F5-RR-gWK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qyv-Zj-O3F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4645.6000000000004" y="936.88155922038993"/>
+            <point key="canvasLocation" x="4646" y="179"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="P4x-3Y-F7M">
@@ -555,4 +556,7 @@
         <image name="icons8-home-24" width="24" height="24"/>
         <image name="icons8-list-24" width="24" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1F5-RR-gWK"/>
+    </inferredMetricsTieBreakers>
 </document>

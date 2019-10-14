@@ -24,54 +24,70 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7D009758-87BD-45D7-97F3-E962E5E5CB05"
+            uuid = "793FF448-BB40-4DD4-B477-908089E5F408"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E7722FF8-322C-4A0E-8A96-44D201F34B30"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "ProfileViewController"
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "7D009758-87BD-45D7-97F3-E962E5E5CB05 - 3f6ef9c51d3c1427"
+                  uuid = "E7722FF8-322C-4A0E-8A96-44D201F34B30 - 9a8f6658606421cf"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "RankWrestlersApp.ProfileViewController.myString.getter : Swift.Optional&lt;Swift.String&gt;"
+                  symbolName = "RankWrestlersApp.ProfileViewController.matches.getter : Swift.Array&lt;RankWrestlersApp.Match&gt;"
                   moduleName = "RankWrestlersApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rankwrestlers/Desktop/RankWrestlersApp/ProfileViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "131">
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "122">
                </Location>
                <Location
-                  uuid = "7D009758-87BD-45D7-97F3-E962E5E5CB05 - 358efd36ec2aa3d3"
+                  uuid = "E7722FF8-322C-4A0E-8A96-44D201F34B30 - 41e6291b678dddfb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "RankWrestlersApp.ProfileViewController.myString.setter : Swift.Optional&lt;Swift.String&gt;"
+                  symbolName = "RankWrestlersApp.ProfileViewController.matches.setter : Swift.Array&lt;RankWrestlersApp.Match&gt;"
                   moduleName = "RankWrestlersApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rankwrestlers/Desktop/RankWrestlersApp/ProfileViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "153">
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "144">
                </Location>
                <Location
-                  uuid = "7D009758-87BD-45D7-97F3-E962E5E5CB05 - 5d9672c363abb022"
+                  uuid = "E7722FF8-322C-4A0E-8A96-44D201F34B30 - bfa98a8886be52ca"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "RankWrestlersApp.ProfileViewController.myString.modify : Swift.Optional&lt;Swift.String&gt;"
+                  symbolName = "RankWrestlersApp.ProfileViewController.matches.modify : Swift.Array&lt;RankWrestlersApp.Match&gt;"
                   moduleName = "RankWrestlersApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rankwrestlers/Desktop/RankWrestlersApp/ProfileViewController.swift"
@@ -82,22 +98,22 @@
                   offsetFromSymbolStart = "18">
                </Location>
                <Location
-                  uuid = "7D009758-87BD-45D7-97F3-E962E5E5CB05 - 42ec54ad39d88c92"
+                  uuid = "E7722FF8-322C-4A0E-8A96-44D201F34B30 - 633a401785cbdcfd"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "RankWrestlersApp.ProfileViewController.myString.modify : Swift.Optional&lt;Swift.String&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  symbolName = "RankWrestlersApp.ProfileViewController.matches.modify : Swift.Array&lt;RankWrestlersApp.Match&gt; with unmangled suffix &quot;.resume.0&quot;"
                   moduleName = "RankWrestlersApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rankwrestlers/Desktop/RankWrestlersApp/ProfileViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
-                  uuid = "7D009758-87BD-45D7-97F3-E962E5E5CB05 - 505661bbf6c5c4a0"
+                  uuid = "E7722FF8-322C-4A0E-8A96-44D201F34B30 - 505661bbf6c5c4a0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -107,12 +123,12 @@
                   urlString = "file:///Users/rankwrestlers/Desktop/RankWrestlersApp/ProfileViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "1524">
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "3329">
                </Location>
                <Location
-                  uuid = "7D009758-87BD-45D7-97F3-E962E5E5CB05 - afde8d9e3199c4ee"
+                  uuid = "E7722FF8-322C-4A0E-8A96-44D201F34B30 - afde8d9e3199c4ee"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -122,9 +138,9 @@
                   urlString = "file:///Users/rankwrestlers/Desktop/RankWrestlersApp/ProfileViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "1456">
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "3261">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -23,7 +23,7 @@ class WeightOptionsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableViewData = [cellData(opened:false,title:"Class 1",sectionData:["106","113","120","120","126","132","138","145","152","160","170","195","220","285"]),cellData(opened:false,title:"Class 2",sectionData:["106","113","120","120","126","132","138","145","152","160","170","195","220","285"]),cellData(opened:false,title:"Class 3",sectionData:["106","113","120","120","126","132","138","145","152","160","170","195","220","285"]),cellData(opened:false,title:"Class 4",sectionData:["106","113","120","120","126","132","138","145","152","160","170","195","220","285"])]
+        tableViewData = [cellData(opened:false,title:"Class 1",sectionData:["106","113","120","126","132","138","145","152","160","170","195","220","285"]),cellData(opened:false,title:"Class 2",sectionData:["106","113","120","126","132","138","145","152","160","170","195","220","285"]),cellData(opened:false,title:"Class 3",sectionData:["106","113","120","126","132","138","145","152","160","170","195","220","285"]),cellData(opened:false,title:"Class 4",sectionData:["106","113","120","126","132","138","145","152","160","170","195","220","285"])]
 
     }
 
@@ -88,11 +88,17 @@ class WeightOptionsTableViewController: UITableViewController {
         let info = segue.destination as! RankDetailViewController
         info.weight = weightToSend
         info.classname = classToSend
+        info.rankclass = rankclassToSend
+        info.rankweight = weightToSend
+        info.rankstate = rankstateToSend
+        
         
      }
     
     var weightToSend: String = ""
     var classToSend: String = ""
+    var rankclassToSend: String = ""
+    var rankstateToSend: String = ""
 
     override func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath){
         if indexPath.row == 0 {
@@ -113,6 +119,8 @@ class WeightOptionsTableViewController: UITableViewController {
         } else {
         classToSend = tableViewData[indexPath.section].title
         weightToSend = tableViewData[indexPath.section].sectionData[indexPath.row - 1]
+        rankclassToSend = String(classToSend.suffix(1))
+        rankstateToSend = "MO"
         self.performSegue(withIdentifier: "rankDetailView", sender: self)
         }
     }

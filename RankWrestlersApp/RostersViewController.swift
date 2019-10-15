@@ -101,7 +101,7 @@ class RostersViewController: UIViewController,RostersModelDelegate, UITableViewD
         } else {
             thisScore = "0"
         }
-        cell.textLabel?.text = rosters[indexPath.row].rankweight + " - " + rosters[indexPath.row].wrestlername + " (" + rosters[indexPath.row].grade + "): " + thisScore + "%"
+        cell.textLabel?.text = rosters[indexPath.row].rankweight + " - #" + rosters[indexPath.row].rank + ", " + rosters[indexPath.row].wrestlername + " (" + rosters[indexPath.row].grade + "): " + thisScore + "%"
         return cell
     }
 

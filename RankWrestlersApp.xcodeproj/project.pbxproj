@@ -38,7 +38,7 @@
 		3930DC8C2355184F00F22676 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		3930DC8E2355199000F22676 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		3930DC9023553B4E00F22676 /* RostersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RostersViewController.swift; sourceTree = "<group>"; };
-		393EEEF5234A2DB500BCBAD2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ../ProfileViewController.swift; sourceTree = "<group>"; };
+		393EEEF5234A2DB500BCBAD2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		397621862354C92600347F07 /* RankingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsModel.swift; sourceTree = "<group>"; };
 		397621882354C97000347F07 /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
 		39909FE92352C88400B53DD6 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +69,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3930DC92235558F100F22676 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				39909FE92352C88400B53DD6 /* TabViewController.swift */,
+				39DD7132231CCBF200AD17EF /* ViewController.swift */,
+				393EEEF5234A2DB500BCBAD2 /* ProfileViewController.swift */,
+				39909FEB2352CE5500B53DD6 /* RankOptionsTableViewController.swift */,
+				39DE2F662353BF710007F31A /* RankingsHomeViewController.swift */,
+				39909FED2352CF3000B53DD6 /* WeightOptionsTableViewController.swift */,
+				39DE2F6C2354139D0007F31A /* RankDetailViewController.swift */,
+				3930DC8E2355199000F22676 /* TeamsViewController.swift */,
+				3930DC9023553B4E00F22676 /* RostersViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3930DC932355594200F22676 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				39DD7144231CCF8100AD17EF /* HomeModel.swift */,
+				397621862354C92600347F07 /* RankingsModel.swift */,
+				3930DC8A2355153900F22676 /* TeamsModel.swift */,
+				3930DC84235513D600F22676 /* RostersModel.swift */,
+				39DD714A231DDCAD00AD17EF /* MatchesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3930DC942355599700F22676 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				39DD714E231DDD1600AD17EF /* Match.swift */,
+				39DD7146231CCFDE00AD17EF /* Location.swift */,
+				397621882354C97000347F07 /* Ranking.swift */,
+				3930DC8C2355184F00F22676 /* Team.swift */,
+				3930DC862355143200F22676 /* Roster.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
 		39DD7124231CCBF200AD17EF = {
 			isa = PBXGroup;
 			children = (
@@ -88,29 +128,13 @@
 		39DD712F231CCBF200AD17EF /* RankWrestlersApp */ = {
 			isa = PBXGroup;
 			children = (
+				3930DC942355599700F22676 /* Structs */,
+				3930DC932355594200F22676 /* Models */,
+				3930DC92235558F100F22676 /* Controllers */,
 				39DD7130231CCBF200AD17EF /* AppDelegate.swift */,
-				39909FE92352C88400B53DD6 /* TabViewController.swift */,
-				39DD7132231CCBF200AD17EF /* ViewController.swift */,
-				393EEEF5234A2DB500BCBAD2 /* ProfileViewController.swift */,
-				39909FEB2352CE5500B53DD6 /* RankOptionsTableViewController.swift */,
-				39DE2F662353BF710007F31A /* RankingsHomeViewController.swift */,
-				39909FED2352CF3000B53DD6 /* WeightOptionsTableViewController.swift */,
-				39DE2F6C2354139D0007F31A /* RankDetailViewController.swift */,
-				3930DC8E2355199000F22676 /* TeamsViewController.swift */,
-				3930DC9023553B4E00F22676 /* RostersViewController.swift */,
 				39DD7134231CCBF200AD17EF /* Main.storyboard */,
 				39DD7137231CCBF600AD17EF /* Assets.xcassets */,
 				39DD713C231CCBF600AD17EF /* Info.plist */,
-				39DD7144231CCF8100AD17EF /* HomeModel.swift */,
-				397621862354C92600347F07 /* RankingsModel.swift */,
-				3930DC8A2355153900F22676 /* TeamsModel.swift */,
-				3930DC84235513D600F22676 /* RostersModel.swift */,
-				39DD714A231DDCAD00AD17EF /* MatchesModel.swift */,
-				39DD714E231DDD1600AD17EF /* Match.swift */,
-				39DD7146231CCFDE00AD17EF /* Location.swift */,
-				397621882354C97000347F07 /* Ranking.swift */,
-				3930DC8C2355184F00F22676 /* Team.swift */,
-				3930DC862355143200F22676 /* Roster.swift */,
 			);
 			path = RankWrestlersApp;
 			sourceTree = "<group>";

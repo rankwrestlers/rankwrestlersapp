@@ -58,5 +58,23 @@ class TeamsViewController: UIViewController,TeamsModelDelegate, UITableViewDataS
         return cell
     }
 
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       
+       let info = segue.destination as! RostersViewController
+       info.school = schoolToSend
+       info.rankstate = rankstateToSend
+      
+    }
+    
+    var schoolToSend: String = ""
+    var rankstateToSend: String = ""
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        schoolToSend = teams[indexPath.row].school
+        rankstateToSend = "MO"
+        
+        self.performSegue(withIdentifier: "rostersView", sender: self)
+        
+    }
  
 }

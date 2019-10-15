@@ -38,6 +38,7 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
     var top3:String! = ""
     var H2H:String! = ""
     var rank:String! = ""
+    var rankstate:String! = ""
     
     var matchesModel = MatchesModel()
     

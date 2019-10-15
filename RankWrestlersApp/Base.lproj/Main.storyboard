@@ -97,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gv9-iB-NuJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4002.4000000000001" y="936.88155922038993"/>
+            <point key="canvasLocation" x="4028" y="1043"/>
         </scene>
         <!--Weight Options Table View Controller-->
         <scene sceneID="YOs-oj-LAL">
@@ -130,7 +130,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3u-3r-PrS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4767.1999999999998" y="936.88155922038993"/>
+            <point key="canvasLocation" x="4793" y="1043"/>
         </scene>
         <!--Rank Detail View Controller-->
         <scene sceneID="yC4-sL-mrR">
@@ -450,10 +450,10 @@
             </objects>
             <point key="canvasLocation" x="1768.8" y="105.69715142428787"/>
         </scene>
-        <!--Rosters-->
+        <!--Teams-->
         <scene sceneID="NAC-ch-uyg">
             <objects>
-                <viewController title="Rosters" id="Kzf-Qz-CKb" customClass="TeamsViewController" customModule="RankWrestlersApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Teams" id="Kzf-Qz-CKb" customClass="TeamsViewController" customModule="RankWrestlersApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b0W-hl-bIK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -502,11 +502,72 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="teamsViewController" destination="4oC-jh-llg" id="mpa-FC-cNn"/>
+                        <segue destination="KlC-Jv-h88" kind="show" identifier="rostersView" id="TaP-qi-r8b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e32-d6-S90" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="788" y="1700.5997001499252"/>
+        </scene>
+        <!--Rosters-->
+        <scene sceneID="dMW-2H-FIW">
+            <objects>
+                <viewController title="Rosters" id="KlC-Jv-h88" customClass="RostersViewController" customModule="RankWrestlersApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bqv-Ke-b8F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2A-e9-Q5b">
+                                <rect key="frame" x="16" y="44" width="343" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="apC-Iw-XOE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HAD-bl-D24">
+                                <rect key="frame" x="0.0" y="81" width="375" height="586"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rosterCell" id="3gJ-6I-51M">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3gJ-6I-51M" id="1vg-Ym-Vff">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="KlC-Jv-h88" id="QyS-KQ-KWi"/>
+                                    <outlet property="delegate" destination="KlC-Jv-h88" id="js9-u4-KMQ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HAD-bl-D24" firstAttribute="trailing" secondItem="WFV-62-OOO" secondAttribute="trailing" id="78y-Nt-Iad"/>
+                            <constraint firstItem="WFV-62-OOO" firstAttribute="trailing" secondItem="t2A-e9-Q5b" secondAttribute="trailing" constant="16" id="Cdx-kc-uJK"/>
+                            <constraint firstItem="t2A-e9-Q5b" firstAttribute="top" secondItem="WFV-62-OOO" secondAttribute="top" id="LHO-bS-j0N"/>
+                            <constraint firstItem="t2A-e9-Q5b" firstAttribute="centerX" secondItem="Bqv-Ke-b8F" secondAttribute="centerX" id="SZp-d2-foK"/>
+                            <constraint firstItem="HAD-bl-D24" firstAttribute="top" secondItem="t2A-e9-Q5b" secondAttribute="bottom" constant="8" id="a8Z-ma-9WR"/>
+                            <constraint firstItem="t2A-e9-Q5b" firstAttribute="leading" secondItem="WFV-62-OOO" secondAttribute="leading" constant="16" id="e3D-wQ-bIc"/>
+                            <constraint firstAttribute="bottom" secondItem="HAD-bl-D24" secondAttribute="bottom" id="i5g-2z-rb4"/>
+                            <constraint firstItem="HAD-bl-D24" firstAttribute="leading" secondItem="WFV-62-OOO" secondAttribute="leading" id="tY1-rv-OJp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WFV-62-OOO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oQr-Y3-FIc"/>
+                    <connections>
+                        <outlet property="rostersLabel" destination="t2A-e9-Q5b" id="LBU-Wv-bO9"/>
+                        <outlet property="rostersViewController" destination="HAD-bl-D24" id="79B-j1-azG"/>
+                        <segue destination="1jf-vO-0jk" kind="show" identifier="rosterProfile" id="QHe-H8-ALy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Swq-5Q-89X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="1701"/>
         </scene>
         <!--MainTabBar-->
         <scene sceneID="5SP-60-EfA">
@@ -545,7 +606,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrs-6e-eyw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3063.1999999999998" y="936.88155922038993"/>
+            <point key="canvasLocation" x="3089" y="1043"/>
         </scene>
         <!--Rosters-->
         <scene sceneID="F03-hO-DiG">
@@ -573,6 +634,6 @@
         <image name="icons8-list-24" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1F5-RR-gWK"/>
+        <segue reference="QHe-H8-ALy"/>
     </inferredMetricsTieBreakers>
 </document>

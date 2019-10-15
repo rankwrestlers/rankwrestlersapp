@@ -22,6 +22,6 @@ struct Roster {
     var ThreeBest = ""
     var H2H = ""
     var rank = ""
-    var rankclass = ""
+    var rankstate = ""
 
 }

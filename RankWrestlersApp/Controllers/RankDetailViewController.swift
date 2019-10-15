@@ -30,6 +30,7 @@ class RankDetailViewController: UIViewController,RankingsModelDelegate, UITableV
     var ThreeBest:String? = ""
     var H2H:String? = ""
     var rank:String? = ""
+ 
     var rankingsModel = RankingsModel()
     
     var rankings = [Ranking]()

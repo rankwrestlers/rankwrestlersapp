@@ -35,17 +35,29 @@ class RankingsHomeViewController: UIViewController,UITableViewDelegate,UITableVi
 
         return cell
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let info = segue.destination as! TeamClassesViewController
+        info.rankstate = rankstateToSend
     
+        
+     }
+    
+    var rankstateToSend: String = ""
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let segueIdentifier: String
         switch indexPath.row {
         case 0:
             segueIdentifier = "classView"
+        case 1:
+            segueIdentifier = "teamClasses"
         default:
             segueIdentifier = "classView"
         
         }
+        rankstateToSend = "MO"
         self.performSegue(withIdentifier:segueIdentifier, sender: self)
     }
 

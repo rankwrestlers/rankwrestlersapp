@@ -210,6 +210,7 @@
                     <connections>
                         <outlet property="teamRankingsLabel" destination="dga-Y1-AfB" id="3fq-uj-EME"/>
                         <outlet property="teamRankingsViewController" destination="FbW-1P-fMI" id="iQs-ep-jsd"/>
+                        <segue destination="KlC-Jv-h88" kind="show" identifier="teamRankingRoster" id="FHV-O1-gMg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aC-wC-xqK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -751,6 +752,7 @@
         <image name="icons8-list-24" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="FHV-O1-gMg"/>
         <segue reference="1F5-RR-gWK"/>
     </inferredMetricsTieBreakers>
 </document>

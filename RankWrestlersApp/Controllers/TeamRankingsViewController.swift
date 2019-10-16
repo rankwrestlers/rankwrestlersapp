@@ -17,21 +17,7 @@ class TeamRankingsViewController: UIViewController,TeamRankingsModelDelegate,UIT
 
        var rankclass:String? = ""
        var rankstate:String? = ""
-       var rankweight:String? = ""
-       var weight:String? = ""
-       var classname:String? = ""
-       var wrestler:String? = ""
-       var wrestlername:String? = ""
-       var school:String? = ""
-       var grade:String? = ""
-       var Wins:String? = ""
-       var Losses:String? = ""
-       var Combo:String? = ""
-       var AdjPerc:String? = ""
-       var ThreeBest:String? = ""
-       var H2H:String? = ""
-       var rank:String? = ""
-    
+   
        var teamRankingsModel = TeamRankingsModel()
        
        var teamRankings = [TeamRanking]()
@@ -105,4 +91,24 @@ class TeamRankingsViewController: UIViewController,TeamRankingsModelDelegate,UIT
             previousrank = thisrank
            return cell
        }
-}
+ 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           
+           let info = segue.destination as! RostersViewController
+           info.school = schoolToSend
+           info.rankstate = rankstateToSend
+          
+        }
+        
+        var schoolToSend: String = ""
+        var rankstateToSend: String = ""
+        
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            schoolToSend = teamRankings[indexPath.row].school
+            rankstateToSend = "MO"
+            
+            self.performSegue(withIdentifier: "teamRankingRoster", sender: self)
+            
+        }
+     
+    }

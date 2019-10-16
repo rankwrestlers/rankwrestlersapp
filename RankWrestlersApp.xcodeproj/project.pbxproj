@@ -23,6 +23,8 @@
 		39909FEA2352C88400B53DD6 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39909FE92352C88400B53DD6 /* TabViewController.swift */; };
 		39909FEC2352CE5500B53DD6 /* RankOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39909FEB2352CE5500B53DD6 /* RankOptionsTableViewController.swift */; };
 		39909FEE2352CF3000B53DD6 /* WeightOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39909FED2352CF3000B53DD6 /* WeightOptionsTableViewController.swift */; };
+		399AE980235601F8003E4917 /* TeamRanking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AE97F235601F8003E4917 /* TeamRanking.swift */; };
+		399AE98223560225003E4917 /* TeamRankingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AE98123560225003E4917 /* TeamRankingsModel.swift */; };
 		39DD7131231CCBF200AD17EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD7130231CCBF200AD17EF /* AppDelegate.swift */; };
 		39DD7133231CCBF200AD17EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD7132231CCBF200AD17EF /* ViewController.swift */; };
 		39DD7136231CCBF200AD17EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39DD7134231CCBF200AD17EF /* Main.storyboard */; };
@@ -52,6 +54,8 @@
 		39909FE92352C88400B53DD6 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		39909FEB2352CE5500B53DD6 /* RankOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankOptionsTableViewController.swift; sourceTree = "<group>"; };
 		39909FED2352CF3000B53DD6 /* WeightOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightOptionsTableViewController.swift; sourceTree = "<group>"; };
+		399AE97F235601F8003E4917 /* TeamRanking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRanking.swift; sourceTree = "<group>"; };
+		399AE98123560225003E4917 /* TeamRankingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRankingsModel.swift; sourceTree = "<group>"; };
 		39DD712D231CCBF200AD17EF /* RankWrestlersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RankWrestlersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39DD7130231CCBF200AD17EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39DD7132231CCBF200AD17EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				3930DC84235513D600F22676 /* RostersModel.swift */,
 				39DD714A231DDCAD00AD17EF /* MatchesModel.swift */,
 				3930DC9B235561A000F22676 /* TeamClassesModel.swift */,
+				399AE98123560225003E4917 /* TeamRankingsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 				3930DC8C2355184F00F22676 /* Team.swift */,
 				3930DC862355143200F22676 /* Roster.swift */,
 				3930DC9D235561C000F22676 /* TeamClass.swift */,
+				399AE97F235601F8003E4917 /* TeamRanking.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -239,10 +245,12 @@
 				3930DC9E235561C000F22676 /* TeamClass.swift in Sources */,
 				3930DC9123553B4E00F22676 /* RostersViewController.swift in Sources */,
 				3930DC9A23555F9C00F22676 /* TeamRankingsViewController.swift in Sources */,
+				399AE980235601F8003E4917 /* TeamRanking.swift in Sources */,
 				39DE2F6D2354139D0007F31A /* RankDetailViewController.swift in Sources */,
 				3930DC8B2355153900F22676 /* TeamsModel.swift in Sources */,
 				3930DC9823555D1C00F22676 /* TeamClassesViewController.swift in Sources */,
 				39DD714F231DDD1600AD17EF /* Match.swift in Sources */,
+				399AE98223560225003E4917 /* TeamRankingsModel.swift in Sources */,
 				3930DC9C235561A000F22676 /* TeamClassesModel.swift in Sources */,
 				3930DC8F2355199000F22676 /* TeamsViewController.swift in Sources */,
 			);

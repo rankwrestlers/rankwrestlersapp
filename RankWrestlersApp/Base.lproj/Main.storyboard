@@ -166,25 +166,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dga-Y1-AfB">
-                                <rect key="frame" x="16" y="44" width="343" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="7PK-7V-u4L"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FbW-1P-fMI">
-                                <rect key="frame" x="0.0" y="91" width="375" height="576"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FbW-1P-fMI">
+                                <rect key="frame" x="0.0" y="103" width="375" height="564"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="KwD-ga-tsA">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="teamRankCell" id="KwD-ga-tsA">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KwD-ga-tsA" id="vPl-1x-XDQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -194,17 +184,33 @@
                                     <outlet property="delegate" destination="2ZO-gX-x3X" id="BPd-Cg-Rd1"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Rankings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dga-Y1-AfB">
+                                <rect key="frame" x="16" y="56" width="343" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="V0g-CQ-ynP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="dga-Y1-AfB" firstAttribute="top" secondItem="65p-pP-SeH" secondAttribute="top" id="Bga-VQ-dvf"/>
-                            <constraint firstItem="65p-pP-SeH" firstAttribute="trailing" secondItem="dga-Y1-AfB" secondAttribute="trailing" constant="16" id="cpt-MI-ZeM"/>
-                            <constraint firstItem="dga-Y1-AfB" firstAttribute="leading" secondItem="65p-pP-SeH" secondAttribute="leading" constant="16" id="qm8-Qq-xBr"/>
-                            <constraint firstItem="dga-Y1-AfB" firstAttribute="centerX" secondItem="OiU-ft-BbH" secondAttribute="centerX" id="uN0-fj-i93"/>
+                            <constraint firstItem="dga-Y1-AfB" firstAttribute="leading" secondItem="OiU-ft-BbH" secondAttribute="leadingMargin" id="JFm-fN-TpU"/>
+                            <constraint firstItem="dga-Y1-AfB" firstAttribute="centerX" secondItem="FbW-1P-fMI" secondAttribute="centerX" id="Jki-Vk-jZR"/>
+                            <constraint firstItem="FbW-1P-fMI" firstAttribute="top" secondItem="dga-Y1-AfB" secondAttribute="bottom" constant="8" id="VIh-zQ-BiE"/>
+                            <constraint firstItem="dga-Y1-AfB" firstAttribute="top" secondItem="65p-pP-SeH" secondAttribute="top" constant="12" id="fe0-Pj-8Oj"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="FbW-1P-fMI" secondAttribute="bottom" constant="-49" id="oS8-8U-sBe"/>
+                            <constraint firstItem="FbW-1P-fMI" firstAttribute="leading" secondItem="65p-pP-SeH" secondAttribute="leading" id="pG1-RD-ro6"/>
+                            <constraint firstItem="dga-Y1-AfB" firstAttribute="trailing" secondItem="OiU-ft-BbH" secondAttribute="trailingMargin" id="paD-CH-7d1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="65p-pP-SeH"/>
                     </view>
                     <navigationItem key="navigationItem" id="Fde-lh-VxT"/>
+                    <connections>
+                        <outlet property="teamRankingsLabel" destination="dga-Y1-AfB" id="3fq-uj-EME"/>
+                        <outlet property="teamRankingsViewController" destination="FbW-1P-fMI" id="iQs-ep-jsd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aC-wC-xqK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -53,6 +53,24 @@ class TeamClassesViewController: UIViewController,TeamClassesModelDelegate,UITab
 
          return cell
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       
+       let info = segue.destination as! TeamRankingsViewController
+       info.rankclass = rankclassToSend
+       info.rankstate = rankstateToSend
+      
+    }
+    
+    var rankclassToSend: String = ""
+    var rankstateToSend: String = ""
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        rankclassToSend = teamClasses[indexPath.row].rankclass
+        rankstateToSend = "MO"
+        
+        self.performSegue(withIdentifier: "teamRankings", sender: self)
+        
+    }
 
  
 

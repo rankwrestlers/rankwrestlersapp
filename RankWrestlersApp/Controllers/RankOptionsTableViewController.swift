@@ -18,9 +18,17 @@ class RankOptionsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let logo = UIImage(named: "rwlogo.png")
-        let imageView = UIImageView(image:logo)
-        self.navigationItem.titleView = imageView
+        let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
+
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "rwlogo")
+        imageView.image = image
+        logoContainer.addSubview(imageView)
+        navigationItem.titleView = logoContainer
+         navigationController?.navigationBar.barTintColor = UIColor.black
+         tabBarController?.tabBar.barTintColor = UIColor.black
+        tabBarController?.tabBar.tintColor = UIColor(red:0.85, green:0.78, blue:0.58, alpha:1.0)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

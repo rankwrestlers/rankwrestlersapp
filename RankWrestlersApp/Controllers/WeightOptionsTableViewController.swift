@@ -27,6 +27,18 @@ class WeightOptionsTableViewController: UITableViewController {
 
         tableViewData = [cellData(opened:false,title:"Class 1",sectionData:["106","113","120","126","132","138","145","152","160","170","195","220","285"]),cellData(opened:false,title:"Class 2",sectionData:["106","113","120","126","132","138","145","152","160","170","195","220","285"]),cellData(opened:false,title:"Class 3",sectionData:["106","113","120","126","132","138","145","152","160","170","195","220","285"]),cellData(opened:false,title:"Class 4",sectionData:["106","113","120","126","132","138","145","152","160","170","195","220","285"])]
 
+          let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
+
+                let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
+                imageView.contentMode = .scaleAspectFit
+                let image = UIImage(named: "rwlogo")
+                imageView.image = image
+                logoContainer.addSubview(imageView)
+                navigationItem.titleView = logoContainer
+                 navigationController?.navigationBar.barTintColor = UIColor.black
+                 tabBarController?.tabBar.barTintColor = UIColor.black
+                tabBarController?.tabBar.tintColor = UIColor(red:0.85, green:0.78, blue:0.58, alpha:1.0)
+         
     }
 
     // MARK: - Table view data source

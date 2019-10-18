@@ -77,7 +77,17 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
         let thisTop3 = Double(top3)
         top3Label.text = numberFormatter.string(from: thisTop3! as NSNumber)
         rankLabel.text = "#" + rank
+        let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
 
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "rwlogo")
+        imageView.image = image
+        logoContainer.addSubview(imageView)
+        navigationItem.titleView = logoContainer
+         navigationController?.navigationBar.barTintColor = UIColor.black
+         tabBarController?.tabBar.barTintColor = UIColor.black
+        tabBarController?.tabBar.tintColor = UIColor(red:0.85, green:0.78, blue:0.58, alpha:1.0)
     }
     
     func ItemsDownloaded(matches: [Match]) {

@@ -14,6 +14,8 @@ struct cellData {
     var sectionData = [String]()
 }
 
+var rankstate:String = ""
+
 class WeightOptionsTableViewController: UITableViewController {
     
     @IBOutlet var weightTableView: UITableView!

@@ -37,17 +37,23 @@ class RankingsHomeViewController: UIViewController,UITableViewDelegate,UITableVi
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let info = segue.destination as! TeamClassesViewController
-        info.rankstate = rankstateToSend
+        switch segueIdentifier {
+        case "classView":
+            let info = segue.destination as! WeightOptionsTableViewController
+        case "teamClasses":
+            let info = segue.destination as! TeamClassesViewController
+            info.rankstate = rankstateToSend
+        default:
+            let info = segue.destination as! WeightOptionsTableViewController
+        }
     
         
      }
     
     var rankstateToSend: String = ""
+    var segueIdentifier: String = ""
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let segueIdentifier: String
         switch indexPath.row {
         case 0:
             segueIdentifier = "classView"

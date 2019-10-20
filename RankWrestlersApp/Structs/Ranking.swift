@@ -23,5 +23,5 @@ struct Ranking {
     var H2H = ""
     var rank = ""
     var rankclass = ""
-
+    var rankstate = ""
 }

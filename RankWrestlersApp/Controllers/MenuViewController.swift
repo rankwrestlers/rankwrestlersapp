@@ -50,6 +50,43 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             return cell
         }
 
- 
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if segue.identifier != "rankingHomeMenu" {
+
+         switch segueIdentifier {
+         case "homePage":
+             let info = segue.destination as! UINavigationController
+ //            info.rankstate = rankstateToSend
+         case "rankingsPage":
+             let info = segue.destination as! RankingsHomeViewController
+ //            info.rankstate = rankstateToSend
+                 case "rostersPage":
+                     let info = segue.destination as! TeamsViewController
+         //            info.rankstate = rankstateToSend
+         default:
+             let info = segue.destination as! WeightOptionsTableViewController
+ //            info.rankstate = rankstateToSend
+             }
+     
+         }
+      }
+  var rankstateToSend: String = ""
+ var segueIdentifier: String = ""
+ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     
+     switch indexPath.row {
+     case 0:
+         segueIdentifier = "homePage"
+     case 1:
+         segueIdentifier = "rankingsPage"
+     case 2:
+         segueIdentifier = "rostersPage"
+     default:
+         segueIdentifier = "homePage"
+     
+     }
+     rankstateToSend = "MO"
+     self.performSegue(withIdentifier:segueIdentifier, sender: self)
+ }
 
 }

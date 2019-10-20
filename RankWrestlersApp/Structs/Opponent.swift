@@ -22,5 +22,6 @@ struct Opponent {
     var ThreeBest = ""
     var H2H = ""
     var rank = ""
+    var rankstate = ""
 
 }

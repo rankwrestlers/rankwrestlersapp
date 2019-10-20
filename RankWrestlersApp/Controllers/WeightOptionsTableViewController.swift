@@ -24,6 +24,8 @@ class WeightOptionsTableViewController: UITableViewController {
 
     var tableViewData = [cellData]()
     
+    var rankstate: String? = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

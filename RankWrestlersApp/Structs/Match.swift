@@ -25,5 +25,6 @@ struct Match {
     var winningstate = ""
     var losingstate = ""
     var AdjPerc = ""
+    var rankstate = ""
 
 }

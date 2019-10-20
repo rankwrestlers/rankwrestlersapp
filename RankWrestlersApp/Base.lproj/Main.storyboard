@@ -1114,7 +1114,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Gx-B9-eRJ">
-                                <rect key="frame" x="0.0" y="121" width="375" height="448"/>
+                                <rect key="frame" x="0.0" y="121" width="375" height="546"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuCell" id="UBi-vE-6cX">
@@ -1162,7 +1162,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TpB-Hz-pW6"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fKh-C1-GDU"/>
+                    <navigationItem key="navigationItem" id="fKh-C1-GDU">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-menu-24" id="Npq-RX-QtM">
+                            <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="menuViewController" destination="4Gx-B9-eRJ" id="ZHt-aS-WMc"/>
                     </connections>
@@ -1198,7 +1202,7 @@
         <image name="icons8-menu-24" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="p46-N2-4g9"/>
+        <segue reference="OKy-0u-iH2"/>
         <segue reference="TaP-qi-r8b"/>
         <segue reference="QHe-H8-ALy"/>
     </inferredMetricsTieBreakers>

@@ -92,7 +92,24 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
     {
         return "Wrestlers Following"
     }
-    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+          return 60
+      }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+         headerView.backgroundColor = UIColor.lightGray
+
+         let headerLabel = UILabel(frame: CGRect(x: 30, y: 10, width:
+             tableView.bounds.size.width, height: tableView.bounds.size.height))
+         headerLabel.font = UIFont(name: "Verdana", size: 30)
+         headerLabel.textColor = UIColor.white
+         headerLabel.text = self.tableView(self.tableView, titleForHeaderInSection: section)
+         headerLabel.sizeToFit()
+         headerView.addSubview(headerLabel)
+
+         return headerView
+
+    }
     var textToSend: String = ""
     var wrestlerNameToSend: String = ""
     var schoolNameToSend: String = ""

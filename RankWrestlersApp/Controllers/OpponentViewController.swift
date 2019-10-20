@@ -79,7 +79,11 @@ class OpponentViewController: UIViewController,MatchesModelDelegate,OpponentsMod
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if opponents.count < 1 {
+            return 1
+        } else {
         return matches.count
+        }
     }
  
 

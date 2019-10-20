@@ -98,12 +98,13 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
       }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
-         headerView.backgroundColor = UIColor.lightGray
+         headerView.backgroundColor = UIColor(red:0.85, green:0.78, blue:0.58, alpha:1.0)
 
-         let headerLabel = UILabel(frame: CGRect(x: 30, y: 10, width:
+         let headerLabel = UILabel(frame: CGRect(x: 60, y: 10, width:
              tableView.bounds.size.width, height: tableView.bounds.size.height))
-         headerLabel.font = UIFont(name: "Verdana", size: 30)
-         headerLabel.textColor = UIColor.white
+        headerLabel.textAlignment = .center
+        headerLabel.font = UIFont(name: "Verdana", size: 30)
+         headerLabel.textColor = UIColor.black
          headerLabel.text = self.tableView(self.tableView, titleForHeaderInSection: section)
          headerLabel.sizeToFit()
          headerView.addSubview(headerLabel)

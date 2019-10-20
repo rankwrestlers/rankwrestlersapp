@@ -37,6 +37,7 @@ class WeightOptionsTableViewController: UITableViewController {
                 imageView.contentMode = .scaleAspectFit
                 let image = UIImage(named: "rwlogo")
                 imageView.image = image
+                imageView.tintColor = UIColor(red:0.85, green:0.78, blue:0.58, alpha:1.0)
                 logoContainer.addSubview(imageView)
                 navigationItem.titleView = logoContainer
                  navigationController?.navigationBar.barTintColor = UIColor.black

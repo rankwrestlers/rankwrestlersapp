@@ -45,6 +45,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath)
             cell.textLabel?.text = options[indexPath.row]
             cell.textLabel?.font = UIFont.systemFont(ofSize: 30.0)
+            cell.contentView.layoutMargins.left = 70
 
             return cell
         }

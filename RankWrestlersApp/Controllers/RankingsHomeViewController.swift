@@ -44,6 +44,7 @@ class RankingsHomeViewController: UIViewController,UITableViewDelegate,UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "RankingsHomeCell", for: indexPath)
         cell.textLabel?.text = options[indexPath.row]
         cell.textLabel?.font = UIFont.systemFont(ofSize: 30.0)
+        cell.contentView.layoutMargins.left = 50
 
         return cell
     }

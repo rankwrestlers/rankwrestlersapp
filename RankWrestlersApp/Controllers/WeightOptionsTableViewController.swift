@@ -20,6 +20,8 @@ class WeightOptionsTableViewController: UITableViewController {
     
     @IBOutlet var weightTableView: UITableView!
     
+    @IBOutlet weak var weightOptionsMenu: UIBarButtonItem!
+
     var tableViewData = [cellData]()
     
     override func viewDidLoad() {
@@ -98,14 +100,16 @@ class WeightOptionsTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+  
+        if segue.identifier != "weightOptionsMenu" {
+
         let info = segue.destination as! RankDetailViewController
         info.weight = weightToSend
         info.classname = classToSend
         info.rankclass = rankclassToSend
         info.rankweight = weightToSend
         info.rankstate = rankstateToSend
-        
+        }
         
      }
     

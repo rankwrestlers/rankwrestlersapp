@@ -44,8 +44,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="7gC-Py-ge2">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-menu-24" id="siq-5q-3aZ">
+                        <barButtonItem key="rightBarButtonItem" tag="1" title="menuButton" image="icons8-menu-24" id="siq-5q-3aZ">
                             <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <connections>
+                                <action selector="menuBarButton:" destination="BYZ-38-t0r" id="qKt-AI-nd1"/>
+                                <segue destination="ass-r2-8Aw" kind="show" identifier="mainMenu" id="iXm-s8-OOh"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -96,9 +100,13 @@
                     <navigationItem key="navigationItem" id="EU1-i6-kOp">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-menu-24" id="QM6-Lo-fTR">
                             <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <connections>
+                                <segue destination="ass-r2-8Aw" kind="show" identifier="rankingHomeMenu" id="y7O-tG-PQt"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="rankingHomeMenu" destination="QM6-Lo-fTR" id="sit-Cj-FhH"/>
                         <outlet property="tableView" destination="8gg-N2-dKK" id="MHE-si-gCi"/>
                         <segue destination="04z-Oe-FLk" kind="show" identifier="classView" id="oAd-M0-5uI"/>
                         <segue destination="wqa-Rb-2MI" kind="show" identifier="teamClasses" id="8E1-XK-3xZ"/>
@@ -156,8 +164,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1iR-UB-3pd"/>
                     </view>
-                    <navigationItem key="navigationItem" id="MmM-2t-mTE"/>
+                    <navigationItem key="navigationItem" id="MmM-2t-mTE">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-menu-24" id="hKn-DL-glo">
+                            <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <connections>
+                                <segue destination="ass-r2-8Aw" kind="show" identifier="teamClassesMenu" id="dDh-Eg-iIc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="teamClassesMenu" destination="hKn-DL-glo" id="zlq-56-Vub"/>
                         <outlet property="teamClassesViewController" destination="yrV-Xd-cY4" id="o76-8A-vg1"/>
                         <segue destination="2ZO-gX-x3X" kind="show" identifier="teamRankings" id="8xT-Wn-rMw"/>
                     </connections>
@@ -214,9 +230,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="65p-pP-SeH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Fde-lh-VxT"/>
+                    <navigationItem key="navigationItem" id="Fde-lh-VxT">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-menu-24" id="pg3-2x-tWB">
+                            <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <connections>
+                                <segue destination="ass-r2-8Aw" kind="show" identifier="teamRankingsMenu" id="oVm-YT-ZYV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="teamRankingsLabel" destination="dga-Y1-AfB" id="3fq-uj-EME"/>
+                        <outlet property="teamRankingsMenu" destination="pg3-2x-tWB" id="nYo-69-bHo"/>
                         <outlet property="teamRankingsViewController" destination="FbW-1P-fMI" id="iQs-ep-jsd"/>
                         <segue destination="KlC-Jv-h88" kind="show" identifier="teamRankingRoster" id="FHV-O1-gMg"/>
                     </connections>
@@ -248,8 +272,16 @@
                             <outlet property="delegate" destination="04z-Oe-FLk" id="Rsl-OI-wcC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ec5-zV-pI2"/>
+                    <navigationItem key="navigationItem" id="ec5-zV-pI2">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-menu-24" id="Jm7-pL-4pQ">
+                            <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <connections>
+                                <segue destination="ass-r2-8Aw" kind="show" identifier="weightOptionsMenu" id="nNs-P9-6wN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="weightOptionsMenu" destination="Jm7-pL-4pQ" id="O3b-Hs-Dbi"/>
                         <outlet property="weightTableView" destination="RDm-d2-UUJ" id="Ozi-AF-3aY"/>
                         <segue destination="EGz-8T-sO0" kind="show" identifier="rankDetailView" id="1zD-pv-xs2"/>
                     </connections>
@@ -304,9 +336,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fC2-oK-fAn"/>
                     </view>
-                    <navigationItem key="navigationItem" id="N0R-MV-sPH"/>
+                    <navigationItem key="navigationItem" id="N0R-MV-sPH">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-menu-24" id="Un1-q4-nZR">
+                            <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <connections>
+                                <segue destination="ass-r2-8Aw" kind="show" identifier="rankDetailMenu" id="vUg-Me-Gd4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="rankDetailLabel" destination="Iho-0i-5xy" id="Ug8-xs-zv2"/>
+                        <outlet property="rankDetailMenu" destination="Un1-q4-nZR" id="gGY-i5-Iib"/>
                         <outlet property="rankDetailTableView" destination="ywk-N3-TgA" id="3Jd-2m-omt"/>
                         <segue destination="1jf-vO-0jk" kind="show" identifier="showProfile" id="1F5-RR-gWK"/>
                     </connections>
@@ -407,7 +447,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KeE-Vr-mx4">
-                                <rect key="frame" x="4" y="232" width="367" height="386"/>
+                                <rect key="frame" x="4" y="232" width="367" height="337"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="theseMatchesCell" rowHeight="0.0" id="Nek-f9-TWG">
@@ -541,10 +581,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8mN-OY-MQi"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lnb-M3-laW"/>
+                    <navigationItem key="navigationItem" id="lnb-M3-laW">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-menu-24" id="hk0-vN-oEK">
+                            <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <connections>
+                                <segue destination="ass-r2-8Aw" kind="show" identifier="profileMenuButton" id="Xcs-js-Mih"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="adjPercLabel" destination="DQs-KA-ADa" id="m0L-8x-223"/>
                         <outlet property="h2hLabel" destination="CrM-uy-pBQ" id="UYH-nE-3nq"/>
+                        <outlet property="profileMenuButton" destination="hk0-vN-oEK" id="TmK-IO-HM9"/>
                         <outlet property="profileViewController" destination="KeE-Vr-mx4" id="oXX-6K-P0Z"/>
                         <outlet property="rankLabel" destination="ge6-ld-N19" id="6UF-Ed-J1x"/>
                         <outlet property="recordLabel" destination="0ig-ap-CDf" id="LDb-yx-ehH"/>
@@ -800,11 +848,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qT3-zL-9sh"/>
                     </view>
-                    <navigationItem key="navigationItem" id="TSo-q7-98T"/>
+                    <navigationItem key="navigationItem" id="TSo-q7-98T">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-menu-24" id="suw-HV-R3v">
+                            <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <connections>
+                                <segue destination="ass-r2-8Aw" kind="show" identifier="opponentMenuButton" id="1P4-Z4-WyK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="adjPercLabel" destination="DAZ-Ri-nYO" id="Iwb-4t-s59"/>
                         <outlet property="h2hLabel" destination="mw2-R7-feu" id="Kej-zv-g4Z"/>
                         <outlet property="nameLabel" destination="7s7-Kh-Oy1" id="bmm-3B-O6l"/>
+                        <outlet property="opponentMenuButton" destination="suw-HV-R3v" id="gVo-uU-9o8"/>
                         <outlet property="opponentViewController" destination="jRj-Ik-bk3" id="Js5-ll-UDR"/>
                         <outlet property="rankLabel" destination="fVC-fZ-BWf" id="Eoh-O3-yl2"/>
                         <outlet property="recordLabel" destination="UuY-mS-Nxz" id="d9e-dS-gZX"/>
@@ -883,13 +939,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aNM-3d-0Z5"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="q1U-b5-PAa"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="hHw-N8-6qI">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-menu-24" id="iyO-iJ-3ID">
                             <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <connections>
+                                <segue destination="ass-r2-8Aw" kind="show" identifier="teamsMenu" id="dmI-e0-Xr8"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="teamsMenu" destination="iyO-iJ-3ID" id="BQJ-Cq-weZ"/>
                         <outlet property="teamsViewController" destination="4oC-jh-llg" id="mpa-FC-cNn"/>
                         <segue destination="KlC-Jv-h88" kind="show" identifier="rostersView" id="TaP-qi-r8b"/>
                     </connections>
@@ -947,9 +1010,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WFV-62-OOO"/>
                     </view>
-                    <navigationItem key="navigationItem" id="oQr-Y3-FIc"/>
+                    <navigationItem key="navigationItem" id="oQr-Y3-FIc">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-menu-24" id="H8D-el-j5i">
+                            <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <connections>
+                                <segue destination="ass-r2-8Aw" kind="show" identifier="rostersMenu" id="p46-N2-4g9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="rostersLabel" destination="t2A-e9-Q5b" id="LBU-Wv-bO9"/>
+                        <outlet property="rostersMenu" destination="H8D-el-j5i" id="G7b-tU-Mwi"/>
                         <outlet property="rostersViewController" destination="HAD-bl-D24" id="79B-j1-azG"/>
                         <segue destination="1jf-vO-0jk" kind="show" identifier="rosterProfile" id="QHe-H8-ALy"/>
                     </connections>
@@ -1016,6 +1087,83 @@
             </objects>
             <point key="canvasLocation" x="788" y="910.79460269865069"/>
         </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="66w-ai-lZS">
+            <objects>
+                <viewController id="ass-r2-8Aw" customClass="MenuViewController" customModule="RankWrestlersApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gim-DH-M6v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Gx-B9-eRJ">
+                                <rect key="frame" x="0.0" y="141" width="375" height="428"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuCell" id="UBi-vE-6cX">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UBi-vE-6cX" id="m5t-NU-9NH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ass-r2-8Aw" id="dc3-WR-Hfg"/>
+                                    <outlet property="delegate" destination="ass-r2-8Aw" id="MYm-hx-4dN"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13d-Bk-vlS">
+                                <rect key="frame" x="0.0" y="74" width="375" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="fMN-OK-JQ6"/>
+                                    <constraint firstAttribute="height" constant="37" id="uTo-FQ-sT5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4Gx-B9-eRJ" firstAttribute="bottom" secondItem="TpB-Hz-pW6" secondAttribute="bottom" id="4HB-tR-H7a"/>
+                            <constraint firstItem="13d-Bk-vlS" firstAttribute="trailing" secondItem="TpB-Hz-pW6" secondAttribute="trailing" id="7jV-Vs-aGJ"/>
+                            <constraint firstItem="4Gx-B9-eRJ" firstAttribute="top" secondItem="13d-Bk-vlS" secondAttribute="bottom" constant="30" id="AVH-uw-8lK"/>
+                            <constraint firstItem="4Gx-B9-eRJ" firstAttribute="leading" secondItem="TpB-Hz-pW6" secondAttribute="leading" id="ELj-Xw-vTT"/>
+                            <constraint firstItem="13d-Bk-vlS" firstAttribute="leading" secondItem="TpB-Hz-pW6" secondAttribute="leading" id="ENB-lh-kKf"/>
+                            <constraint firstItem="13d-Bk-vlS" firstAttribute="top" secondItem="TpB-Hz-pW6" secondAttribute="top" constant="30" id="ITf-Hn-UVg"/>
+                            <constraint firstItem="4Gx-B9-eRJ" firstAttribute="top" secondItem="13d-Bk-vlS" secondAttribute="bottom" constant="30" id="cur-tD-we6"/>
+                            <constraint firstItem="4Gx-B9-eRJ" firstAttribute="trailing" secondItem="TpB-Hz-pW6" secondAttribute="trailing" id="x7p-LG-0Tb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TpB-Hz-pW6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fKh-C1-GDU"/>
+                    <connections>
+                        <outlet property="menuViewController" destination="4Gx-B9-eRJ" id="ZHt-aS-WMc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HKI-oz-Qoa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1727.2" y="2519.1904047976013"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="siD-Bg-Lam">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fcB-LN-pkI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SPU-bE-zJQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ass-r2-8Aw" kind="relationship" relationship="rootViewController" id="OKy-0u-iH2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oVw-AQ-FlN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="2519.1904047976013"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icons8-bar-chart-24" width="24" height="24"/>
@@ -1024,7 +1172,8 @@
         <image name="icons8-menu-24" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FHV-O1-gMg"/>
-        <segue reference="oYx-Xq-kf3"/>
+        <segue reference="p46-N2-4g9"/>
+        <segue reference="TaP-qi-r8b"/>
+        <segue reference="QHe-H8-ALy"/>
     </inferredMetricsTieBreakers>
 </document>

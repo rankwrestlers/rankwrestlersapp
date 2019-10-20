@@ -15,6 +15,7 @@ class RostersViewController: UIViewController,RostersModelDelegate, UITableViewD
     
     @IBOutlet weak var rostersViewController: UITableView!
 
+    @IBOutlet weak var rostersMenu: UIBarButtonItem!
     var rankweight:String? = ""
     var weight:String? = ""
     var classname:String? = ""
@@ -81,7 +82,8 @@ class RostersViewController: UIViewController,RostersModelDelegate, UITableViewD
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      
+      if segue.identifier != "rostersMenu" {
+
       let info = segue.destination as! ProfileViewController
       info.myString = textToSend
       info.wrestlerName = wrestlerNameToSend
@@ -96,7 +98,7 @@ class RostersViewController: UIViewController,RostersModelDelegate, UITableViewD
       info.weightClass = weightClassToSend + " lbs"
       info.rank = rankToSend
         info.rankstate = rankStateToSend
-      
+        }
    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

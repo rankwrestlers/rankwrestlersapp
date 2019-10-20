@@ -13,6 +13,7 @@ class TeamsViewController: UIViewController,TeamsModelDelegate, UITableViewDataS
 
     @IBOutlet weak var teamsViewController: UITableView!
 
+    @IBOutlet weak var teamsMenu: UIBarButtonItem!
     var school:String? = ""
     var rankstate:String? = ""
    
@@ -71,11 +72,12 @@ class TeamsViewController: UIViewController,TeamsModelDelegate, UITableViewDataS
     }
 
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
+    if segue.identifier != "teamsMenu" {
+
        let info = segue.destination as! RostersViewController
        info.school = schoolToSend
        info.rankstate = rankstateToSend
-      
+        }
     }
     
     var schoolToSend: String = ""

@@ -12,6 +12,13 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+
+    @IBAction func menuBarButton(_ sender: UIBarButtonItem) {
+ 
+    }
+    
+
     var homeModel = HomeModel()
     
     var locations = [Location]()
@@ -46,6 +53,7 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        if segue.identifier != "mainMenu" {
         let info = segue.destination as! ProfileViewController
         info.myString = textToSend
         info.wrestlerName = wrestlerNameToSend
@@ -59,7 +67,7 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
         info.Losses = lossesToSend
         info.weightClass = weightClassToSend + " lbs"
         info.rank = rankToSend
-        
+        }
      }
     
     // MARK: - UITableView Delegate Methods

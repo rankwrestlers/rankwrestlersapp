@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		391B5FA42357F44C00CDF861 /* Opponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B5FA32357F44C00CDF861 /* Opponent.swift */; };
 		391B5FA62357F45E00CDF861 /* OpponentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B5FA52357F45E00CDF861 /* OpponentsModel.swift */; };
+		391B5FA8235A704300CDF861 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B5FA7235A704300CDF861 /* MenuViewController.swift */; };
 		3930DC85235513D600F22676 /* RostersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3930DC84235513D600F22676 /* RostersModel.swift */; };
 		3930DC872355143200F22676 /* Roster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3930DC862355143200F22676 /* Roster.swift */; };
 		3930DC8B2355153900F22676 /* TeamsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3930DC8A2355153900F22676 /* TeamsModel.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		391B5FA32357F44C00CDF861 /* Opponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opponent.swift; sourceTree = "<group>"; };
 		391B5FA52357F45E00CDF861 /* OpponentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpponentsModel.swift; sourceTree = "<group>"; };
+		391B5FA7235A704300CDF861 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3930DC84235513D600F22676 /* RostersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RostersModel.swift; sourceTree = "<group>"; };
 		3930DC862355143200F22676 /* Roster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roster.swift; sourceTree = "<group>"; };
 		3930DC8A2355153900F22676 /* TeamsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsModel.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		3930DC92235558F100F22676 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				391B5FA7235A704300CDF861 /* MenuViewController.swift */,
 				39909FE92352C88400B53DD6 /* TabViewController.swift */,
 				39DD7132231CCBF200AD17EF /* ViewController.swift */,
 				393EEEF5234A2DB500BCBAD2 /* ProfileViewController.swift */,
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39DD7133231CCBF200AD17EF /* ViewController.swift in Sources */,
+				391B5FA8235A704300CDF861 /* MenuViewController.swift in Sources */,
 				39909FEE2352CF3000B53DD6 /* WeightOptionsTableViewController.swift in Sources */,
 				3930DC8D2355184F00F22676 /* Team.swift in Sources */,
 				39DE2F672353BF710007F31A /* RankingsHomeViewController.swift in Sources */,

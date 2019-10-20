@@ -44,6 +44,7 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
     
     var matches = [Match]()
     
+    @IBOutlet weak var profileMenuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -165,10 +166,12 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          
-         let info = segue.destination as! OpponentViewController
+         if segue.identifier != "profileMenuButton" {
+
+        let info = segue.destination as! OpponentViewController
          info.opponent = opponentToSend
         info.rankstate = rankstateToSend
-         
+        }
       }
     
      var opponentToSend: String = ""

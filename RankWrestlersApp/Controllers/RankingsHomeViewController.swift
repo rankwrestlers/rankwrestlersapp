@@ -10,7 +10,8 @@ import UIKit
 
 class RankingsHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
- 
+    @IBOutlet weak var rankingHomeMenu: UIBarButtonItem!
+    
     @IBOutlet weak var tableView: UITableView!
     
     var options = ["Class Rankings","Team Rankings","Grade Rankings","Pin Rankings"]
@@ -48,6 +49,8 @@ class RankingsHomeViewController: UIViewController,UITableViewDelegate,UITableVi
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier != "rankingHomeMenu" {
+
         switch segueIdentifier {
         case "classView":
             let info = segue.destination as! WeightOptionsTableViewController
@@ -58,7 +61,7 @@ class RankingsHomeViewController: UIViewController,UITableViewDelegate,UITableVi
             let info = segue.destination as! WeightOptionsTableViewController
         }
     
-        
+        }
      }
     
     var rankstateToSend: String = ""

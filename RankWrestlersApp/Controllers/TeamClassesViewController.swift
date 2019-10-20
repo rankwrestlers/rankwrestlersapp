@@ -21,6 +21,7 @@ class TeamClassesViewController: UIViewController,TeamClassesModelDelegate,UITab
    
     @IBOutlet weak var teamClassesViewController: UITableView!
     
+    @IBOutlet weak var teamClassesMenu: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -64,11 +65,12 @@ class TeamClassesViewController: UIViewController,TeamClassesModelDelegate,UITab
          return cell
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
+    if segue.identifier != "teamClassesMenu" {
+
        let info = segue.destination as! TeamRankingsViewController
        info.rankclass = rankclassToSend
        info.rankstate = rankstateToSend
-      
+        }
     }
     
     var rankclassToSend: String = ""

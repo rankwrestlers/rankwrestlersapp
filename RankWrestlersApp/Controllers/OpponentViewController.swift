@@ -24,6 +24,7 @@ class OpponentViewController: UIViewController,MatchesModelDelegate,OpponentsMod
     @IBOutlet weak var top3Label: UILabel!
     @IBOutlet weak var h2hLabel: UILabel!
     
+    @IBOutlet weak var opponentMenuButton: UIBarButtonItem!
     var opponent:String? = ""
     var rankstate:String? = ""
     var wrestlername:String? = ""

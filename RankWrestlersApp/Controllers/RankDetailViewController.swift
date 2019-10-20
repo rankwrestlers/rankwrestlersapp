@@ -13,7 +13,8 @@ class RankDetailViewController: UIViewController,RankingsModelDelegate, UITableV
     @IBOutlet weak var rankDetailLabel: UILabel!
     
     @IBOutlet weak var rankDetailTableView: UITableView!
-
+    @IBOutlet weak var rankDetailMenu: UIBarButtonItem!
+    
     var rankweight:String? = ""
     var weight:String? = ""
     var classname:String? = ""
@@ -79,7 +80,9 @@ class RankDetailViewController: UIViewController,RankingsModelDelegate, UITableV
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      
+ 
+    if segue.identifier != "rankDetailMenu" {
+
       let info = segue.destination as! ProfileViewController
       info.myString = textToSend
       info.wrestlerName = wrestlerNameToSend
@@ -93,6 +96,7 @@ class RankDetailViewController: UIViewController,RankingsModelDelegate, UITableV
       info.Losses = lossesToSend
       info.weightClass = weightClassToSend + " lbs"
       info.rank = rankToSend
+        }
       
    }
     

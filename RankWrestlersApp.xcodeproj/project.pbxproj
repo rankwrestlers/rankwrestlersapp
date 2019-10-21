@@ -39,6 +39,10 @@
 		39DD714F231DDD1600AD17EF /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD714E231DDD1600AD17EF /* Match.swift */; };
 		39DE2F672353BF710007F31A /* RankingsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE2F662353BF710007F31A /* RankingsHomeViewController.swift */; };
 		39DE2F6D2354139D0007F31A /* RankDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE2F6C2354139D0007F31A /* RankDetailViewController.swift */; };
+		39E9FF2B235D3B3900BBAF94 /* GradeRanking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9FF2A235D3B3900BBAF94 /* GradeRanking.swift */; };
+		39E9FF2D235D3B6600BBAF94 /* GradeRankings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9FF2C235D3B6600BBAF94 /* GradeRankings.swift */; };
+		39E9FF2F235D3C6F00BBAF94 /* GradeRankingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9FF2E235D3C6F00BBAF94 /* GradeRankingsViewController.swift */; };
+		39E9FF31235D44A900BBAF94 /* GradeOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9FF30235D44A900BBAF94 /* GradeOptionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +80,10 @@
 		39DD714E231DDD1600AD17EF /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		39DE2F662353BF710007F31A /* RankingsHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsHomeViewController.swift; sourceTree = "<group>"; };
 		39DE2F6C2354139D0007F31A /* RankDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankDetailViewController.swift; sourceTree = "<group>"; };
+		39E9FF2A235D3B3900BBAF94 /* GradeRanking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeRanking.swift; sourceTree = "<group>"; };
+		39E9FF2C235D3B6600BBAF94 /* GradeRankings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeRankings.swift; sourceTree = "<group>"; };
+		39E9FF2E235D3C6F00BBAF94 /* GradeRankingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeRankingsViewController.swift; sourceTree = "<group>"; };
+		39E9FF30235D44A900BBAF94 /* GradeOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeOptionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,8 @@
 				39DE2F662353BF710007F31A /* RankingsHomeViewController.swift */,
 				39909FED2352CF3000B53DD6 /* WeightOptionsTableViewController.swift */,
 				39DE2F6C2354139D0007F31A /* RankDetailViewController.swift */,
+				39E9FF30235D44A900BBAF94 /* GradeOptionsViewController.swift */,
+				39E9FF2E235D3C6F00BBAF94 /* GradeRankingsViewController.swift */,
 				3930DC9723555D1C00F22676 /* TeamClassesViewController.swift */,
 				3930DC9923555F9C00F22676 /* TeamRankingsViewController.swift */,
 				3930DC8E2355199000F22676 /* TeamsViewController.swift */,
@@ -114,6 +124,7 @@
 			children = (
 				39DD7144231CCF8100AD17EF /* HomeModel.swift */,
 				397621862354C92600347F07 /* RankingsModel.swift */,
+				39E9FF2C235D3B6600BBAF94 /* GradeRankings.swift */,
 				3930DC8A2355153900F22676 /* TeamsModel.swift */,
 				3930DC84235513D600F22676 /* RostersModel.swift */,
 				39DD714A231DDCAD00AD17EF /* MatchesModel.swift */,
@@ -130,6 +141,7 @@
 				39DD714E231DDD1600AD17EF /* Match.swift */,
 				39DD7146231CCFDE00AD17EF /* Location.swift */,
 				397621882354C97000347F07 /* Ranking.swift */,
+				39E9FF2A235D3B3900BBAF94 /* GradeRanking.swift */,
 				3930DC8C2355184F00F22676 /* Team.swift */,
 				3930DC862355143200F22676 /* Roster.swift */,
 				3930DC9D235561C000F22676 /* TeamClass.swift */,
@@ -252,6 +264,8 @@
 				39DD714B231DDCAD00AD17EF /* MatchesModel.swift in Sources */,
 				397621892354C97000347F07 /* Ranking.swift in Sources */,
 				393EEEF6234A2DB500BCBAD2 /* ProfileViewController.swift in Sources */,
+				39E9FF2B235D3B3900BBAF94 /* GradeRanking.swift in Sources */,
+				39E9FF2D235D3B6600BBAF94 /* GradeRankings.swift in Sources */,
 				39909FEA2352C88400B53DD6 /* TabViewController.swift in Sources */,
 				39DD7145231CCF8100AD17EF /* HomeModel.swift in Sources */,
 				397621872354C92600347F07 /* RankingsModel.swift in Sources */,
@@ -261,9 +275,11 @@
 				3930DC9123553B4E00F22676 /* RostersViewController.swift in Sources */,
 				3930DC9A23555F9C00F22676 /* TeamRankingsViewController.swift in Sources */,
 				399AE980235601F8003E4917 /* TeamRanking.swift in Sources */,
+				39E9FF31235D44A900BBAF94 /* GradeOptionsViewController.swift in Sources */,
 				399AE9902357E925003E4917 /* OpponentViewController.swift in Sources */,
 				39DE2F6D2354139D0007F31A /* RankDetailViewController.swift in Sources */,
 				3930DC8B2355153900F22676 /* TeamsModel.swift in Sources */,
+				39E9FF2F235D3C6F00BBAF94 /* GradeRankingsViewController.swift in Sources */,
 				3930DC9823555D1C00F22676 /* TeamClassesViewController.swift in Sources */,
 				39DD714F231DDD1600AD17EF /* Match.swift in Sources */,
 				399AE98223560225003E4917 /* TeamRankingsModel.swift in Sources */,

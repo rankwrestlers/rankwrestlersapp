@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource, UITableViewDelegate {
+class FollowingViewController: UIViewController, HomeModelDelegate, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     

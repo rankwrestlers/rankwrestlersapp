@@ -11,13 +11,13 @@
         <!--Following List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Following List" id="BYZ-38-t0r" customClass="ViewController" customModule="RankWrestlersApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Following List" id="BYZ-38-t0r" customClass="FollowingViewController" customModule="RankWrestlersApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P7r-Sh-I4L">
-                                <rect key="frame" x="0.0" y="128" width="375" height="519"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="575"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="matchesCell" id="fn9-N8-ONm">
@@ -34,7 +34,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZE-ct-Jm9">
-                                <rect key="frame" x="0.0" y="56" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="fn4-FD-5Br"/>
                                 </constraints>
@@ -981,7 +981,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="magnifyingglass" catalog="system" id="zn6-Ts-hoz"/>
                     </navigationItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oJe-Y6-1fu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -1257,9 +1257,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuViewController" destination="4Gx-B9-eRJ" id="ZHt-aS-WMc"/>
-                        <segue destination="3R6-PS-8Ba" kind="show" identifier="homePage" id="r3J-nk-UeN"/>
                         <segue destination="3C5-Zv-BWz" kind="show" identifier="rankingsPage" id="tFW-z7-68X"/>
                         <segue destination="Kzf-Qz-CKb" kind="show" identifier="rostersPage" id="a7G-Kn-FuT"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="followingPage" id="2Ti-az-25y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKI-oz-Qoa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1375,8 +1375,8 @@
         <segue reference="iXm-s8-OOh"/>
         <segue reference="TaP-qi-r8b"/>
         <segue reference="a7G-Kn-FuT"/>
-        <segue reference="r3J-nk-UeN"/>
         <segue reference="oYx-Xq-kf3"/>
         <segue reference="tFW-z7-68X"/>
+        <segue reference="2Ti-az-25y"/>
     </inferredMetricsTieBreakers>
 </document>

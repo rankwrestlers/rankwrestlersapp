@@ -55,8 +55,8 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         if segue.identifier != "rankingHomeMenu" {
             
             switch segueIdentifier {
-            case "homePage":
-                let info = segue.destination as! UINavigationController
+            case "followingPage":
+                let info = segue.destination as! FollowingViewController
             //            info.rankstate = rankstateToSend
             case "rankingsPage":
                 let info = segue.destination as! RankingsHomeViewController
@@ -77,7 +77,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         switch indexPath.row {
         case 0:
-            segueIdentifier = "homePage"
+            segueIdentifier = "followingPage"
         case 1:
             segueIdentifier = "rankingsPage"
         case 2:

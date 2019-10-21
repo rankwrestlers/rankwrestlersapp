@@ -30,7 +30,7 @@
 		399AE98223560225003E4917 /* TeamRankingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AE98123560225003E4917 /* TeamRankingsModel.swift */; };
 		399AE9902357E925003E4917 /* OpponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AE98F2357E925003E4917 /* OpponentViewController.swift */; };
 		39DD7131231CCBF200AD17EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD7130231CCBF200AD17EF /* AppDelegate.swift */; };
-		39DD7133231CCBF200AD17EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD7132231CCBF200AD17EF /* ViewController.swift */; };
+		39DD7133231CCBF200AD17EF /* FollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD7132231CCBF200AD17EF /* FollowingViewController.swift */; };
 		39DD7136231CCBF200AD17EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39DD7134231CCBF200AD17EF /* Main.storyboard */; };
 		39DD7138231CCBF600AD17EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39DD7137231CCBF600AD17EF /* Assets.xcassets */; };
 		39DD7145231CCF8100AD17EF /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD7144231CCF8100AD17EF /* HomeModel.swift */; };
@@ -70,7 +70,7 @@
 		399AE98F2357E925003E4917 /* OpponentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpponentViewController.swift; sourceTree = "<group>"; };
 		39DD712D231CCBF200AD17EF /* RankWrestlersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RankWrestlersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39DD7130231CCBF200AD17EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		39DD7132231CCBF200AD17EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		39DD7132231CCBF200AD17EF /* FollowingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingViewController.swift; sourceTree = "<group>"; };
 		39DD7135231CCBF200AD17EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39DD7137231CCBF600AD17EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39DD713C231CCBF600AD17EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 			children = (
 				391B5FA7235A704300CDF861 /* MenuViewController.swift */,
 				39909FE92352C88400B53DD6 /* TabViewController.swift */,
-				39DD7132231CCBF200AD17EF /* ViewController.swift */,
+				39DD7132231CCBF200AD17EF /* FollowingViewController.swift */,
 				393EEEF5234A2DB500BCBAD2 /* ProfileViewController.swift */,
 				399AE98F2357E925003E4917 /* OpponentViewController.swift */,
 				39909FEB2352CE5500B53DD6 /* RankOptionsTableViewController.swift */,
@@ -251,7 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39DD7133231CCBF200AD17EF /* ViewController.swift in Sources */,
+				39DD7133231CCBF200AD17EF /* FollowingViewController.swift in Sources */,
 				391B5FA8235A704300CDF861 /* MenuViewController.swift in Sources */,
 				39909FEE2352CF3000B53DD6 /* WeightOptionsTableViewController.swift in Sources */,
 				3930DC8D2355184F00F22676 /* Team.swift in Sources */,

@@ -12,6 +12,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
     @IBOutlet weak var menuViewController: UITableView!
  
+    @IBOutlet weak var menuLabel: UILabel!
     var options = ["Home","Rankings","Rosters","Big Wins","All Americans","Meet / Tourney Guide","College Rankings","Change State"]
     
     
@@ -30,7 +31,8 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         navigationController?.navigationBar.barTintColor = UIColor.black
         tabBarController?.tabBar.barTintColor = UIColor.black
         tabBarController?.tabBar.tintColor = UIColor(red:0.85, green:0.78, blue:0.58, alpha:1.0)
-        
+        menuLabel.backgroundColor = UIColor(red:0.85, green:0.78, blue:0.58, alpha:1.0)
+
     }
     
     

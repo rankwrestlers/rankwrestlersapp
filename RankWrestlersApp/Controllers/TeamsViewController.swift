@@ -13,6 +13,7 @@ class TeamsViewController: UIViewController,TeamsModelDelegate, UITableViewDataS
 
     @IBOutlet weak var teamsViewController: UITableView!
 
+    @IBOutlet weak var teamsLabel: UILabel!
     @IBOutlet weak var teamsMenu: UIBarButtonItem!
     var school:String? = ""
     var rankstate:String? = ""
@@ -48,7 +49,8 @@ class TeamsViewController: UIViewController,TeamsModelDelegate, UITableViewDataS
          navigationController?.navigationBar.barTintColor = UIColor.black
          tabBarController?.tabBar.barTintColor = UIColor.black
          tabBarController?.tabBar.tintColor = UIColor(red:0.85, green:0.78, blue:0.58, alpha:1.0)
-        
+        teamsLabel.backgroundColor = UIColor(red:0.85, green:0.78, blue:0.58, alpha:1.0)
+
     }
     
     func ItemsDownloaded(teams: [Team]) {

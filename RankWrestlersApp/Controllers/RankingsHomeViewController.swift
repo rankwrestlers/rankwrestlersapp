@@ -14,6 +14,8 @@ class RankingsHomeViewController: UIViewController,UITableViewDelegate,UITableVi
     
     @IBOutlet weak var tableView: UITableView!
     
+     @IBOutlet weak var rankingOptionsLabel: UILabel!
+
     var options = ["Class Rankings","Team Rankings","Grade Rankings","Pin Rankings"]
 
     override func viewDidLoad() {
@@ -30,6 +32,8 @@ class RankingsHomeViewController: UIViewController,UITableViewDelegate,UITableVi
          navigationController?.navigationBar.barTintColor = UIColor.black
          tabBarController?.tabBar.barTintColor = UIColor.black
         tabBarController?.tabBar.tintColor = UIColor(red:0.85, green:0.78, blue:0.58, alpha:1.0)
+        rankingOptionsLabel.backgroundColor = UIColor(red:0.85, green:0.78, blue:0.58, alpha:1.0)
+
         tableView.reloadData()
     }
     

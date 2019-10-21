@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P7r-Sh-I4L">
-                                <rect key="frame" x="0.0" y="56" width="375" height="591"/>
+                                <rect key="frame" x="0.0" y="128" width="375" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="matchesCell" id="fn9-N8-ONm">
@@ -33,13 +33,26 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="MeL-Cl-FrZ"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZE-ct-Jm9">
+                                <rect key="frame" x="0.0" y="56" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="fn4-FD-5Br"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="P7r-Sh-I4L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8rF-GJ-r1b"/>
-                            <constraint firstItem="P7r-Sh-I4L" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YYv-56-p8l"/>
-                            <constraint firstItem="P7r-Sh-I4L" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Yf8-Im-Ijj"/>
-                            <constraint firstItem="P7r-Sh-I4L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="t0c-XR-UMn"/>
+                            <constraint firstItem="cZE-ct-Jm9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ek-Yh-cod"/>
+                            <constraint firstItem="cZE-ct-Jm9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7xs-8X-bVc"/>
+                            <constraint firstItem="P7r-Sh-I4L" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="C0M-9w-qrW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cZE-ct-Jm9" secondAttribute="trailing" id="Kgy-wS-cVW"/>
+                            <constraint firstItem="cZE-ct-Jm9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TFV-Ev-dVr"/>
+                            <constraint firstItem="P7r-Sh-I4L" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UzZ-hi-Th5"/>
+                            <constraint firstItem="P7r-Sh-I4L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="of7-8d-Wgk"/>
+                            <constraint firstItem="P7r-Sh-I4L" firstAttribute="top" secondItem="cZE-ct-Jm9" secondAttribute="bottom" constant="12" id="xsD-1w-NfU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -53,6 +66,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="followingLabel" destination="cZE-ct-Jm9" id="byd-TR-8iE"/>
                         <outlet property="tableView" destination="P7r-Sh-I4L" id="bpD-Xe-zGL"/>
                         <segue destination="1jf-vO-0jk" kind="show" identifier="GoToMatches" id="oYx-Xq-kf3"/>
                     </connections>
@@ -1358,11 +1372,11 @@
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="y7O-tG-PQt"/>
+        <segue reference="iXm-s8-OOh"/>
         <segue reference="TaP-qi-r8b"/>
         <segue reference="a7G-Kn-FuT"/>
         <segue reference="r3J-nk-UeN"/>
-        <segue reference="30T-Si-7N1"/>
+        <segue reference="oYx-Xq-kf3"/>
         <segue reference="tFW-z7-68X"/>
     </inferredMetricsTieBreakers>
 </document>

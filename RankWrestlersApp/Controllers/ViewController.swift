@@ -12,6 +12,7 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var followingLabel: UILabel!
     
 
     @IBAction func menuBarButton(_ sender: UIBarButtonItem) {
@@ -45,6 +46,7 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
         tabBarController?.tabBar.barTintColor = UIColor.black
         tabBarController?.tabBar.tintColor = UIColor(red:0.85, green:0.78, blue:0.58, alpha:1.0)
         
+        followingLabel.backgroundColor = UIColor(red:0.85, green:0.78, blue:0.58, alpha:1.0)
     }
 
     func ItemsDownloaded(locations: [Location]) {
@@ -89,29 +91,7 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
         
     }
  
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section:Int) -> String?
-    {
-        return "Wrestlers Following"
-    }
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-          return 60
-      }
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
-         headerView.backgroundColor = UIColor(red:0.85, green:0.78, blue:0.58, alpha:1.0)
 
-         let headerLabel = UILabel(frame: CGRect(x: 60, y: 10, width:
-             tableView.bounds.size.width, height: tableView.bounds.size.height))
-        headerLabel.textAlignment = .center
-        headerLabel.font = UIFont(name: "Verdana", size: 30)
-         headerLabel.textColor = UIColor.black
-         headerLabel.text = self.tableView(self.tableView, titleForHeaderInSection: section)
-         headerLabel.sizeToFit()
-         headerView.addSubview(headerLabel)
-
-         return headerView
-
-    }
     var textToSend: String = ""
     var wrestlerNameToSend: String = ""
     var schoolNameToSend: String = ""

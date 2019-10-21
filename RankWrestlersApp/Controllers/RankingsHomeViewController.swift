@@ -67,6 +67,9 @@ class RankingsHomeViewController: UIViewController,UITableViewDelegate,UITableVi
         case "gradeRankings":
             let info = segue.destination as! GradeOptionsViewController
             info.rankstate = rankstateToSend
+        case "pinRankings":
+            let info = segue.destination as! PinsViewController
+            info.rankstate = rankstateToSend
         default:
             let info = segue.destination as! WeightOptionsTableViewController
 //            info.rankstate = rankstateToSend
@@ -86,6 +89,8 @@ class RankingsHomeViewController: UIViewController,UITableViewDelegate,UITableVi
             segueIdentifier = "teamClasses"
         case 2:
             segueIdentifier = "gradeRankings"
+        case 3:
+            segueIdentifier = "pinRankings"
         default:
             segueIdentifier = "classView"
         

@@ -70,7 +70,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8gg-N2-dKK">
-                                <rect key="frame" x="0.0" y="20" width="375" height="627"/>
+                                <rect key="frame" x="0.0" y="69" width="375" height="578"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RankingsHomeCell" id="vpN-WJ-9yp">
@@ -103,13 +103,23 @@
                                     <outlet property="delegate" destination="3C5-Zv-BWz" id="WBy-yz-CnY"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking Options" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZD-Iz-qjz">
+                                <rect key="frame" x="0.0" y="20" width="375" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="8gg-N2-dKK" firstAttribute="trailing" secondItem="eUM-Tf-n76" secondAttribute="trailing" id="89d-ij-Slu"/>
-                            <constraint firstItem="8gg-N2-dKK" firstAttribute="top" secondItem="eUM-Tf-n76" secondAttribute="top" constant="20" id="Gep-v6-DTJ"/>
-                            <constraint firstItem="8gg-N2-dKK" firstAttribute="leading" secondItem="eUM-Tf-n76" secondAttribute="leading" id="Jnu-Tl-2gO"/>
-                            <constraint firstItem="8gg-N2-dKK" firstAttribute="bottom" secondItem="eUM-Tf-n76" secondAttribute="bottom" id="hLf-cf-TuS"/>
+                            <constraint firstItem="8gg-N2-dKK" firstAttribute="top" secondItem="zZD-Iz-qjz" secondAttribute="bottom" constant="12" id="60P-5Z-q4k"/>
+                            <constraint firstItem="8gg-N2-dKK" firstAttribute="leading" secondItem="eUM-Tf-n76" secondAttribute="leading" id="b2s-XF-pgb"/>
+                            <constraint firstItem="zZD-Iz-qjz" firstAttribute="leading" secondItem="eUM-Tf-n76" secondAttribute="leading" id="coT-TE-qTV"/>
+                            <constraint firstItem="8gg-N2-dKK" firstAttribute="trailing" secondItem="eUM-Tf-n76" secondAttribute="trailing" id="fvt-ZY-lSr"/>
+                            <constraint firstItem="zZD-Iz-qjz" firstAttribute="trailing" secondItem="eUM-Tf-n76" secondAttribute="trailing" id="kDg-YM-DoX"/>
+                            <constraint firstItem="zZD-Iz-qjz" firstAttribute="top" secondItem="eUM-Tf-n76" secondAttribute="top" constant="20" id="lAK-Mu-wrq"/>
+                            <constraint firstItem="8gg-N2-dKK" firstAttribute="bottom" secondItem="eUM-Tf-n76" secondAttribute="bottom" id="nEy-yi-RLA"/>
+                            <constraint firstItem="zZD-Iz-qjz" firstAttribute="centerX" secondItem="yfB-r7-E25" secondAttribute="centerX" id="vns-hL-ZYN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eUM-Tf-n76"/>
                     </view>
@@ -1348,7 +1358,7 @@
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wQs-9I-RI5"/>
+        <segue reference="y7O-tG-PQt"/>
         <segue reference="TaP-qi-r8b"/>
         <segue reference="a7G-Kn-FuT"/>
         <segue reference="r3J-nk-UeN"/>

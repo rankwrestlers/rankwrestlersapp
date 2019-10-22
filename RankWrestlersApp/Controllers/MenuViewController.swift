@@ -66,8 +66,11 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             case "rostersPage":
                 let info = segue.destination as! TeamsViewController
             //            info.rankstate = rankstateToSend
+            case "bigWinsPage":
+                let info = segue.destination as! BigWinsViewController
+                info.rankstate = rankstateToSend
             default:
-                let info = segue.destination as! WeightOptionsTableViewController
+                let info = segue.destination as! FollowingViewController
                 //            info.rankstate = rankstateToSend
             }
             
@@ -84,8 +87,10 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             segueIdentifier = "rankingsPage"
         case 2:
             segueIdentifier = "rostersPage"
+        case 3:
+            segueIdentifier = "bigWinsPage"
         default:
-            segueIdentifier = "homePage"
+            segueIdentifier = "followingPage"
             
         }
         rankstateToSend = "MO"

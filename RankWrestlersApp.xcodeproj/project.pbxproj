@@ -34,6 +34,9 @@
 		39A5F713235E6A0600E33CD8 /* BigWin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A5F712235E6A0600E33CD8 /* BigWin.swift */; };
 		39A5F715235E6A3700E33CD8 /* BigWinsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A5F714235E6A3700E33CD8 /* BigWinsModel.swift */; };
 		39A5F717235F75EA00E33CD8 /* BigWinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A5F716235F75EA00E33CD8 /* BigWinsViewController.swift */; };
+		39A5F719235F94B800E33CD8 /* AllAmerican.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A5F718235F94B800E33CD8 /* AllAmerican.swift */; };
+		39A5F71B235F950000E33CD8 /* AllAmericansModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A5F71A235F950000E33CD8 /* AllAmericansModel.swift */; };
+		39A5F71D235F95E300E33CD8 /* AllAmericansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A5F71C235F95E300E33CD8 /* AllAmericansViewController.swift */; };
 		39DD7131231CCBF200AD17EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD7130231CCBF200AD17EF /* AppDelegate.swift */; };
 		39DD7133231CCBF200AD17EF /* FollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD7132231CCBF200AD17EF /* FollowingViewController.swift */; };
 		39DD7136231CCBF200AD17EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39DD7134231CCBF200AD17EF /* Main.storyboard */; };
@@ -78,6 +81,9 @@
 		39A5F712235E6A0600E33CD8 /* BigWin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigWin.swift; sourceTree = "<group>"; };
 		39A5F714235E6A3700E33CD8 /* BigWinsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigWinsModel.swift; sourceTree = "<group>"; };
 		39A5F716235F75EA00E33CD8 /* BigWinsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigWinsViewController.swift; sourceTree = "<group>"; };
+		39A5F718235F94B800E33CD8 /* AllAmerican.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAmerican.swift; sourceTree = "<group>"; };
+		39A5F71A235F950000E33CD8 /* AllAmericansModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAmericansModel.swift; sourceTree = "<group>"; };
+		39A5F71C235F95E300E33CD8 /* AllAmericansViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAmericansViewController.swift; sourceTree = "<group>"; };
 		39DD712D231CCBF200AD17EF /* RankWrestlersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RankWrestlersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39DD7130231CCBF200AD17EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39DD7132231CCBF200AD17EF /* FollowingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 				3930DC9023553B4E00F22676 /* RostersViewController.swift */,
 				39A5F710235E53A500E33CD8 /* PinsViewController.swift */,
 				39A5F716235F75EA00E33CD8 /* BigWinsViewController.swift */,
+				39A5F71C235F95E300E33CD8 /* AllAmericansViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -144,6 +151,7 @@
 				391B5FA52357F45E00CDF861 /* OpponentsModel.swift */,
 				39A5F70E235E52C300E33CD8 /* PinsModel.swift */,
 				39A5F714235E6A3700E33CD8 /* BigWinsModel.swift */,
+				39A5F71A235F950000E33CD8 /* AllAmericansModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,6 +170,7 @@
 				391B5FA32357F44C00CDF861 /* Opponent.swift */,
 				39A5F70C235E525600E33CD8 /* Pin.swift */,
 				39A5F712235E6A0600E33CD8 /* BigWin.swift */,
+				39A5F718235F94B800E33CD8 /* AllAmerican.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -276,9 +285,11 @@
 				3930DC872355143200F22676 /* Roster.swift in Sources */,
 				39DD7131231CCBF200AD17EF /* AppDelegate.swift in Sources */,
 				3930DC85235513D600F22676 /* RostersModel.swift in Sources */,
+				39A5F71D235F95E300E33CD8 /* AllAmericansViewController.swift in Sources */,
 				39DD7147231CCFDE00AD17EF /* Location.swift in Sources */,
 				39A5F711235E53A500E33CD8 /* PinsViewController.swift in Sources */,
 				39DD714B231DDCAD00AD17EF /* MatchesModel.swift in Sources */,
+				39A5F719235F94B800E33CD8 /* AllAmerican.swift in Sources */,
 				397621892354C97000347F07 /* Ranking.swift in Sources */,
 				393EEEF6234A2DB500BCBAD2 /* ProfileViewController.swift in Sources */,
 				39E9FF2B235D3B3900BBAF94 /* GradeRanking.swift in Sources */,
@@ -287,6 +298,7 @@
 				39909FEA2352C88400B53DD6 /* TabViewController.swift in Sources */,
 				39DD7145231CCF8100AD17EF /* HomeModel.swift in Sources */,
 				397621872354C92600347F07 /* RankingsModel.swift in Sources */,
+				39A5F71B235F950000E33CD8 /* AllAmericansModel.swift in Sources */,
 				391B5FA62357F45E00CDF861 /* OpponentsModel.swift in Sources */,
 				39A5F715235E6A3700E33CD8 /* BigWinsModel.swift in Sources */,
 				3930DC9E235561C000F22676 /* TeamClass.swift in Sources */,

@@ -24,7 +24,9 @@ class FollowingViewController: UIViewController, HomeModelDelegate, UITableViewD
     
     var locations = [Location]()
  
-    var rankstate: String? = ""
+    var rankstate: String? = "MO"
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +74,7 @@ class FollowingViewController: UIViewController, HomeModelDelegate, UITableViewD
         info.Losses = lossesToSend
         info.weightClass = weightClassToSend + " lbs"
         info.rank = rankToSend
+        info.rankstate = rankstate
         }
      }
     

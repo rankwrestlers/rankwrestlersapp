@@ -85,7 +85,7 @@ class TeamClassesViewController: UIViewController,TeamClassesModelDelegate,UITab
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         rankclassToSend = teamClasses[indexPath.row].rankclass
-        rankstateToSend = "MO"
+        rankstateToSend = rankstate!
         
         self.performSegue(withIdentifier: "teamRankings", sender: self)
         

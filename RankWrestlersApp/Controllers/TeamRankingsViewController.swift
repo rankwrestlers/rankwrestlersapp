@@ -123,7 +123,7 @@ class TeamRankingsViewController: UIViewController,TeamRankingsModelDelegate,UIT
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             schoolToSend = teamRankings[indexPath.row].school
-            rankstateToSend = "MO"
+            rankstateToSend = rankstate!
             
             self.performSegue(withIdentifier: "teamRankingRoster", sender: self)
             

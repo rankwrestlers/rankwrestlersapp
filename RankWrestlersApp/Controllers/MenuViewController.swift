@@ -60,13 +60,13 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             switch segueIdentifier {
             case "followingPage":
                 let info = segue.destination as! FollowingViewController
-            //            info.rankstate = rankstateToSend
+                info.rankstate = rankstateToSend
             case "rankingsPage":
                 let info = segue.destination as! RankingsHomeViewController
-            //            info.rankstate = rankstateToSend
+                info.rankstate = rankstateToSend
             case "rostersPage":
                 let info = segue.destination as! TeamsViewController
-            //            info.rankstate = rankstateToSend
+                info.rankstate = rankstateToSend
             case "bigWinsPage":
                 let info = segue.destination as! BigWinsViewController
                 info.rankstate = rankstateToSend
@@ -80,7 +80,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 let thisState = rankstateToSend
             default:
                 let info = segue.destination as! FollowingViewController
-                //            info.rankstate = rankstateToSend
+                info.rankstate = rankstateToSend
             }
             
         }
@@ -108,7 +108,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             segueIdentifier = "followingPage"
             
         }
-        rankstateToSend = "MO"
+        rankstateToSend = rankstate!
         self.performSegue(withIdentifier:segueIdentifier, sender: self)
     }
     

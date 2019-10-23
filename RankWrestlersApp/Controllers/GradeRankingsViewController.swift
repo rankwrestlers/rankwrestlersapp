@@ -95,6 +95,7 @@ class GradeRankingsViewController: UIViewController,GradeRankingsModelDelegate, 
                 thisScore = "0"
             }
             cell.textLabel?.text = "#" + String(indexPath.row + 1) + " - " + gradeRankings[indexPath.row].wrestlername + " (" + gradeRankings[indexPath.row].school + "): " + thisScore + "%"
+            cell.textLabel?.numberOfLines = 0
             return cell
         }
        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

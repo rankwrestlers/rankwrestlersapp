@@ -98,7 +98,7 @@ class RankingsHomeViewController: UIViewController,UITableViewDelegate,UITableVi
             segueIdentifier = "classView"
         
         }
-        rankstateToSend = "MO"
+        rankstateToSend = rankstate!
         self.performSegue(withIdentifier:segueIdentifier, sender: self)
     }
 

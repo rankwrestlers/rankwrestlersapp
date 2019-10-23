@@ -68,7 +68,7 @@ class ChangeStateViewController: UIViewController,UITableViewDelegate,UITableVie
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          
         rankstateName = options[indexPath.row]
-         switch rankstate {
+         switch rankstateName {
          case "Alaska":
              rankstateToSend = "AK"
         default:

@@ -73,7 +73,7 @@ class GradeOptionsViewController: UIViewController,UITableViewDelegate,UITableVi
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             gradeToSend = options[indexPath.row]
-            rankStateToSend = "MO"
+            rankStateToSend = rankstate!
             
             self.performSegue(withIdentifier: "gradeDetail", sender: self)
             

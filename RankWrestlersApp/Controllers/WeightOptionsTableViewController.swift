@@ -141,7 +141,7 @@ class WeightOptionsTableViewController: UITableViewController {
         classToSend = tableViewData[indexPath.section].title
         weightToSend = tableViewData[indexPath.section].sectionData[indexPath.row - 1]
         rankclassToSend = String(classToSend.suffix(1))
-        rankstateToSend = "MO"
+            rankstateToSend = rankstate!
         self.performSegue(withIdentifier: "rankDetailView", sender: self)
         }
     }

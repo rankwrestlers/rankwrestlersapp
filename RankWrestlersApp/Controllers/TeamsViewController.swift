@@ -88,7 +88,7 @@ class TeamsViewController: UIViewController,TeamsModelDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         schoolToSend = teams[indexPath.row].school
-        rankstateToSend = "MO"
+        rankstateToSend = rankstate!
         
         self.performSegue(withIdentifier: "rostersView", sender: self)
         

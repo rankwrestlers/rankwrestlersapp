@@ -72,6 +72,9 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             case "allAmericansPage":
                 let info = segue.destination as! AllAmericansViewController
                 info.rankstate = rankstateToSend
+            case "eventTeamsPage":
+                let info = segue.destination as! EventTeamsViewController
+                info.rankstate = rankstateToSend
             default:
                 let info = segue.destination as! FollowingViewController
                 //            info.rankstate = rankstateToSend
@@ -94,6 +97,8 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             segueIdentifier = "bigWinsPage"
         case 4:
             segueIdentifier = "allAmericansPage"
+        case 5:
+            segueIdentifier = "eventTeamsPage"
         default:
             segueIdentifier = "followingPage"
             

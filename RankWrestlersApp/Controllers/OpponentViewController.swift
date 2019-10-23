@@ -45,7 +45,7 @@ class OpponentViewController: UIViewController,MatchesModelDelegate,OpponentsMod
         opponentViewController.dataSource = self
         opponentsModel.getItems(rankstate!,opponent!)
         opponentsModel.delegate = self
-        matchesModel.getItems(opponent!)
+        matchesModel.getItems(rankstate!,opponent!)
         matchesModel.delegate = self
 
      let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))

@@ -23,7 +23,9 @@ class FollowingViewController: UIViewController, HomeModelDelegate, UITableViewD
     var homeModel = HomeModel()
     
     var locations = [Location]()
-    
+ 
+    var rankstate: String? = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
         

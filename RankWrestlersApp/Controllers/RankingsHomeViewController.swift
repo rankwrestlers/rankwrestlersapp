@@ -15,6 +15,9 @@ class RankingsHomeViewController: UIViewController,UITableViewDelegate,UITableVi
     @IBOutlet weak var tableView: UITableView!
     
      @IBOutlet weak var rankingOptionsLabel: UILabel!
+    
+    var rankstate: String? = ""
+    var rankstateName: String? = ""
 
     var options = ["Class Rankings","Team Rankings","Grade Rankings","Pin Rankings"]
 
@@ -33,7 +36,7 @@ class RankingsHomeViewController: UIViewController,UITableViewDelegate,UITableVi
          tabBarController?.tabBar.barTintColor = UIColor.black
         tabBarController?.tabBar.tintColor = UIColor(red:0.85, green:0.78, blue:0.58, alpha:1.0)
         rankingOptionsLabel.backgroundColor = UIColor(red:0.85, green:0.78, blue:0.58, alpha:1.0)
-
+        rankingOptionsLabel.text = (rankstateName ?? "") + " Rankings"
         tableView.reloadData()
     }
     

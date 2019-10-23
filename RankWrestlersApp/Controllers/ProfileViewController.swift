@@ -43,7 +43,8 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
     var matchesModel = MatchesModel()
     
     var matches = [Match]()
-    
+ 
+
     @IBOutlet weak var profileMenuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -59,7 +60,7 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
         profileViewController.estimatedRowHeight = 20
         profileViewController.rowHeight = UITableView.automaticDimension
         
-        matchesModel.getItems(myString!)
+        matchesModel.getItems(rankstate!,myString!)
 
         matchesModel.delegate = self
         wrestlerNameLabel.text = wrestlerName
@@ -182,7 +183,7 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
      
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          opponentToSend = matches[indexPath.row].Opponent
-        rankstateToSend = "MO"
+        rankstateToSend = rankstate
          
          self.performSegue(withIdentifier: "opponentProfile", sender: self)
          

@@ -18,9 +18,9 @@ class MatchesModel: NSObject {
     
     var delegate:MatchesModelDelegate?
     
-    func getItems(_ wrestlerId:String) {
+    func getItems(_ rankstate:String,_ wrestlerId:String) {
         
-        let serviceURL = "https://RankWrestlers.com/wrestlerresultsapp.php?wrestler=" + wrestlerId + "&rankstate=MO"
+        let serviceURL = "https://RankWrestlers.com/wrestlerresultsapp.php?wrestler=" + wrestlerId + "&rankstate=" + rankstate
         
         print ("serviceURL: " + serviceURL)
         

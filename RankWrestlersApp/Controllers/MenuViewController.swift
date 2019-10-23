@@ -14,7 +14,8 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
  
     @IBOutlet weak var menuLabel: UILabel!
     var options = ["Home","Rankings","Rosters","Big Wins","All Americans","Meet / Tourney Guide","College Rankings","Change State"]
-    
+    var rankstate: String? = ""
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +76,8 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             case "eventTeamsPage":
                 let info = segue.destination as! EventTeamsViewController
                 info.rankstate = rankstateToSend
+            case "changeStatePage":
+                let thisState = rankstateToSend
             default:
                 let info = segue.destination as! FollowingViewController
                 //            info.rankstate = rankstateToSend
@@ -99,6 +102,8 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             segueIdentifier = "allAmericansPage"
         case 5:
             segueIdentifier = "eventTeamsPage"
+        case 7:
+            segueIdentifier = "changeStatePage"
         default:
             segueIdentifier = "followingPage"
             

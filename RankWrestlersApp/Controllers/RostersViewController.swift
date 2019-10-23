@@ -99,8 +99,8 @@ class RostersViewController: UIViewController,RostersModelDelegate, UITableViewD
       info.Losses = lossesToSend
       info.weightClass = weightClassToSend + " lbs"
       info.rank = rankToSend
-        info.rankstate = rankStateToSend
-        }
+      info.rankstate = rankStateToSend
+     }
    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -149,7 +149,7 @@ class RostersViewController: UIViewController,RostersModelDelegate, UITableViewD
         threeBestToSend = rosters[indexPath.row].ThreeBest
         h2hToSend = rosters[indexPath.row].H2H
         rankToSend = rosters[indexPath.row].rank
-        rankStateToSend = "MO"
+        rankStateToSend = rankstate!
         
         self.performSegue(withIdentifier: "rosterProfile", sender: self)
         

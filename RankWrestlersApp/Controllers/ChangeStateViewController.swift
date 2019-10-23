@@ -71,6 +71,8 @@ class ChangeStateViewController: UIViewController,UITableViewDelegate,UITableVie
          switch rankstateName {
          case "Alaska":
              rankstateToSend = "AK"
+         case "North Carolina":
+            rankstateToSend = "NC"
         default:
              rankstateToSend = "MO"
          }

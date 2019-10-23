@@ -26,7 +26,8 @@ class WeightOptionsViewController: UIViewController,TeamClassesModelDelegate,UIT
         var sectionData = [String]()
     }
     var tableViewData = [cellData]()
-
+    
+    // need to add if for idaho, ny and mi
     var weightClasses = ["106","113","120","126","132","138","145","152","160","170","195","220","285"]
     
     override func viewDidLoad() {
@@ -53,7 +54,21 @@ class WeightOptionsViewController: UIViewController,TeamClassesModelDelegate,UIT
     }
         func ItemsDownloaded(teamClasses: [TeamClass]) {
             self.teamClasses = teamClasses
+            switch teamClasses.count {
+            case 2:
+            tableViewData = [cellData(opened:false,title:teamClasses[0].rankclass,sectionData:weightClasses),cellData(opened:false,title:teamClasses[1].rankclass,sectionData:weightClasses)]
+            case 3:
+            tableViewData = [cellData(opened:false,title:teamClasses[0].rankclass,sectionData:weightClasses),cellData(opened:false,title:teamClasses[1].rankclass,sectionData:weightClasses),cellData(opened:false,title:teamClasses[2].rankclass)]
+            case 4:
             tableViewData = [cellData(opened:false,title:teamClasses[0].rankclass,sectionData:weightClasses),cellData(opened:false,title:teamClasses[1].rankclass,sectionData:weightClasses),cellData(opened:false,title:teamClasses[2].rankclass,sectionData:weightClasses),cellData(opened:false,title:teamClasses[3].rankclass,sectionData:weightClasses)]
+            case 5:
+            tableViewData = [cellData(opened:false,title:teamClasses[0].rankclass,sectionData:weightClasses),cellData(opened:false,title:teamClasses[1].rankclass,sectionData:weightClasses),cellData(opened:false,title:teamClasses[2].rankclass,sectionData:weightClasses),cellData(opened:false,title:teamClasses[3].rankclass,sectionData:weightClasses),cellData(opened:false,title:teamClasses[4].rankclass,sectionData:weightClasses)]
+            case 6:
+            tableViewData = [cellData(opened:false,title:teamClasses[0].rankclass,sectionData:weightClasses),cellData(opened:false,title:teamClasses[1].rankclass,sectionData:weightClasses),cellData(opened:false,title:teamClasses[2].rankclass,sectionData:weightClasses),cellData(opened:false,title:teamClasses[3].rankclass,sectionData:weightClasses),cellData(opened:false,title:teamClasses[4].rankclass,sectionData:weightClasses),cellData(opened:false,title:teamClasses[5].rankclass,sectionData:weightClasses)]
+            default:
+                tableViewData = [cellData(opened:false,title:teamClasses[0].rankclass,sectionData:weightClasses)]
+
+            }
                      
                 weightOptionsViewController.reloadData()
         }

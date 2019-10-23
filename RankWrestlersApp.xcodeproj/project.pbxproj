@@ -24,7 +24,6 @@
 		397621872354C92600347F07 /* RankingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397621862354C92600347F07 /* RankingsModel.swift */; };
 		397621892354C97000347F07 /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397621882354C97000347F07 /* Ranking.swift */; };
 		39909FEA2352C88400B53DD6 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39909FE92352C88400B53DD6 /* TabViewController.swift */; };
-		39909FEE2352CF3000B53DD6 /* WeightOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39909FED2352CF3000B53DD6 /* WeightOptionsTableViewController.swift */; };
 		3998C111235FDF31005FFEE8 /* RankingHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3998C110235FDF31005FFEE8 /* RankingHome.swift */; };
 		3998C115235FF2FE005FFEE8 /* WeightOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3998C114235FF2FE005FFEE8 /* WeightOptionsViewController.swift */; };
 		399AE980235601F8003E4917 /* TeamRanking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AE97F235601F8003E4917 /* TeamRanking.swift */; };
@@ -75,7 +74,6 @@
 		397621862354C92600347F07 /* RankingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsModel.swift; sourceTree = "<group>"; };
 		397621882354C97000347F07 /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
 		39909FE92352C88400B53DD6 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
-		39909FED2352CF3000B53DD6 /* WeightOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightOptionsTableViewController.swift; sourceTree = "<group>"; };
 		3998C110235FDF31005FFEE8 /* RankingHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingHome.swift; sourceTree = "<group>"; };
 		3998C114235FF2FE005FFEE8 /* WeightOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightOptionsViewController.swift; sourceTree = "<group>"; };
 		399AE97F235601F8003E4917 /* TeamRanking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRanking.swift; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 				393EEEF5234A2DB500BCBAD2 /* ProfileViewController.swift */,
 				399AE98F2357E925003E4917 /* OpponentViewController.swift */,
 				39DE2F662353BF710007F31A /* RankingsHomeViewController.swift */,
-				39909FED2352CF3000B53DD6 /* WeightOptionsTableViewController.swift */,
 				3998C114235FF2FE005FFEE8 /* WeightOptionsViewController.swift */,
 				39DE2F6C2354139D0007F31A /* RankDetailViewController.swift */,
 				39E9FF30235D44A900BBAF94 /* GradeOptionsViewController.swift */,
@@ -291,7 +288,6 @@
 				39A5F70F235E52C300E33CD8 /* PinsModel.swift in Sources */,
 				39DD7133231CCBF200AD17EF /* FollowingViewController.swift in Sources */,
 				391B5FA8235A704300CDF861 /* MenuViewController.swift in Sources */,
-				39909FEE2352CF3000B53DD6 /* WeightOptionsTableViewController.swift in Sources */,
 				3930DC8D2355184F00F22676 /* Team.swift in Sources */,
 				39DE2F672353BF710007F31A /* RankingsHomeViewController.swift in Sources */,
 				3930DC872355143200F22676 /* Roster.swift in Sources */,

@@ -151,10 +151,10 @@
                         <outlet property="rankingHomeMenu" destination="QM6-Lo-fTR" id="sit-Cj-FhH"/>
                         <outlet property="rankingOptionsLabel" destination="zZD-Iz-qjz" id="d49-gi-36S"/>
                         <outlet property="tableView" destination="8gg-N2-dKK" id="MHE-si-gCi"/>
-                        <segue destination="04z-Oe-FLk" kind="show" identifier="classView" id="oAd-M0-5uI"/>
                         <segue destination="wqa-Rb-2MI" kind="show" identifier="teamClasses" id="8E1-XK-3xZ"/>
                         <segue destination="XPv-hK-opW" kind="show" identifier="gradeRankings" id="gtt-s1-UT8"/>
                         <segue destination="cEk-JR-wu7" kind="show" identifier="pinRankings" id="apw-Q2-MXL"/>
+                        <segue destination="htQ-jp-ojV" kind="show" identifier="classView" id="6K7-81-17S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gv9-iB-NuJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -364,45 +364,64 @@
             </objects>
             <point key="canvasLocation" x="5975.1999999999998" y="909.89505247376314"/>
         </scene>
-        <!--Weight Options Table View Controller-->
-        <scene sceneID="YOs-oj-LAL">
+        <!--Weight Options View Controller-->
+        <scene sceneID="vPm-Tp-fma">
             <objects>
-                <tableViewController id="04z-Oe-FLk" customClass="WeightOptionsTableViewController" customModule="RankWrestlersApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RDm-d2-UUJ">
+                <viewController id="htQ-jp-ojV" customClass="WeightOptionsViewController" customModule="RankWrestlersApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xCX-Jv-a1U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Class / Weight:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo2-6K-80g">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="CSt-TZ-vbC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Aeh-PI-dkR">
+                                <rect key="frame" x="0.0" y="72" width="375" height="575"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="weightOptionsCell" id="qF8-Oa-IqJ">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qF8-Oa-IqJ" id="Wsj-jY-nQ0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="htQ-jp-ojV" id="9iS-gE-FXd"/>
+                                    <outlet property="delegate" destination="htQ-jp-ojV" id="1Fr-7S-WVU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="thiscell" id="ahS-WE-Sf2">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ahS-WE-Sf2" id="qr4-H6-NOh">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="04z-Oe-FLk" id="TLl-px-42i"/>
-                            <outlet property="delegate" destination="04z-Oe-FLk" id="Rsl-OI-wcC"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="ec5-zV-pI2">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-menu-24" id="Jm7-pL-4pQ">
-                            <connections>
-                                <segue destination="ass-r2-8Aw" kind="show" identifier="weightOptionsMenu" id="nNs-P9-6wN"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                        <constraints>
+                            <constraint firstItem="Aeh-PI-dkR" firstAttribute="top" secondItem="mo2-6K-80g" secondAttribute="bottom" constant="12" id="7tV-GV-7bm"/>
+                            <constraint firstItem="mo2-6K-80g" firstAttribute="leading" secondItem="Rxb-E6-hDJ" secondAttribute="leading" id="CnK-cA-OeC"/>
+                            <constraint firstItem="Rxb-E6-hDJ" firstAttribute="trailing" secondItem="mo2-6K-80g" secondAttribute="trailing" id="Rhj-Mn-4Gm"/>
+                            <constraint firstItem="Aeh-PI-dkR" firstAttribute="leading" secondItem="Rxb-E6-hDJ" secondAttribute="leading" id="grP-Di-sNM"/>
+                            <constraint firstItem="Aeh-PI-dkR" firstAttribute="bottom" secondItem="Rxb-E6-hDJ" secondAttribute="bottom" id="kh5-F2-aYe"/>
+                            <constraint firstItem="mo2-6K-80g" firstAttribute="top" secondItem="Rxb-E6-hDJ" secondAttribute="top" id="suq-Df-Wyu"/>
+                            <constraint firstItem="Aeh-PI-dkR" firstAttribute="trailing" secondItem="Rxb-E6-hDJ" secondAttribute="trailing" id="vft-fk-Q4a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rxb-E6-hDJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xmj-2I-M8H"/>
                     <connections>
-                        <outlet property="weightOptionsMenu" destination="Jm7-pL-4pQ" id="O3b-Hs-Dbi"/>
-                        <outlet property="weightTableView" destination="RDm-d2-UUJ" id="Ozi-AF-3aY"/>
-                        <segue destination="EGz-8T-sO0" kind="show" identifier="rankDetailView" id="1zD-pv-xs2"/>
+                        <outlet property="weightOptionsLabel" destination="mo2-6K-80g" id="Nu6-K7-Vko"/>
+                        <outlet property="weightOptionsViewController" destination="Aeh-PI-dkR" id="oyd-eQ-X3w"/>
+                        <segue destination="EGz-8T-sO0" kind="show" identifier="rankDetail" id="IcS-rL-XbN"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c3u-3r-PrS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NXu-zW-GGE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5201" y="155"/>
+            <point key="canvasLocation" x="5136.8000000000002" y="153.37331334332833"/>
         </scene>
         <!--Rank Detail View Controller-->
         <scene sceneID="yC4-sL-mrR">
@@ -1754,7 +1773,7 @@
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dZR-B4-Yob"/>
+        <segue reference="y7O-tG-PQt"/>
         <segue reference="FHV-O1-gMg"/>
         <segue reference="a7G-Kn-FuT"/>
         <segue reference="sbG-kA-x5A"/>

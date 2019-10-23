@@ -62,8 +62,8 @@ class RankingsHomeViewController: UIViewController,UITableViewDelegate,UITableVi
 
         switch segueIdentifier {
         case "classView":
-            let info = segue.destination as! WeightOptionsTableViewController
-//            info.rankstate = rankstateToSend
+            let info = segue.destination as! WeightOptionsViewController
+            info.rankstate = rankstateToSend
         case "teamClasses":
             let info = segue.destination as! TeamClassesViewController
             info.rankstate = rankstateToSend
@@ -74,7 +74,7 @@ class RankingsHomeViewController: UIViewController,UITableViewDelegate,UITableVi
             let info = segue.destination as! PinsViewController
             info.rankstate = rankstateToSend
         default:
-            let info = segue.destination as! WeightOptionsTableViewController
+            let info = segue.destination as! WeightOptionsViewController
 //            info.rankstate = rankstateToSend
             }
     

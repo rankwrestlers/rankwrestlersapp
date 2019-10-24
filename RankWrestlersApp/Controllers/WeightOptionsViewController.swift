@@ -32,6 +32,7 @@ class WeightOptionsViewController: UIViewController,TeamClassesModelDelegate,UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        rankstate = stateName.thisState
 
         weightOptionsViewController.delegate = self
         weightOptionsViewController.dataSource = self

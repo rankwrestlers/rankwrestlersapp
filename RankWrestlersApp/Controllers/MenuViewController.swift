@@ -20,6 +20,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        rankstate = stateName.thisState
         let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
         
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))

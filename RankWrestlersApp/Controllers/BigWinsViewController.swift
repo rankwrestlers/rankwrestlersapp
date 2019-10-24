@@ -23,7 +23,8 @@ class BigWinsViewController: UIViewController,BigWinsModelDelegate, UITableViewD
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            
+            rankstate = stateName.thisState
+
             bigWinsViewController.delegate = self
             bigWinsViewController.dataSource = self
             

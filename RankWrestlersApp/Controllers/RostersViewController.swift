@@ -40,6 +40,7 @@ class RostersViewController: UIViewController,RostersModelDelegate, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        rankstate = stateName.thisState
 
         rostersLabel.text = school! + " Roster"
         let numberFormatter = NumberFormatter()

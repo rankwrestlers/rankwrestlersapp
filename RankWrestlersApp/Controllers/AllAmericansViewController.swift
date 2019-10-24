@@ -21,6 +21,7 @@ class AllAmericansViewController: UIViewController,AllAmericansModelDelegate, UI
 
         override func viewDidLoad() {
             super.viewDidLoad()
+            rankstate = stateName.thisState
 
             allAmericanLabel.text = rankstate! + " All-Americans"
             let numberFormatter = NumberFormatter()

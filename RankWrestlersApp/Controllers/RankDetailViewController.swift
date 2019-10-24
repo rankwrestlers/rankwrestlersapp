@@ -38,6 +38,7 @@ class RankDetailViewController: UIViewController,RankingsModelDelegate, UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        rankstate = stateName.thisState
 
         rankDetailLabel.text = weight! + " Pounds - Class " + rankclass!
         let numberFormatter = NumberFormatter()

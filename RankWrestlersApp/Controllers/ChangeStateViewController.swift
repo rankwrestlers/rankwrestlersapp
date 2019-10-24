@@ -19,7 +19,10 @@ class ChangeStateViewController: UIViewController,UITableViewDelegate,UITableVie
 
      override func viewDidLoad() {
          super.viewDidLoad()
-         let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
+ 
+        rankstate = stateName.thisState
+
+        let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
 
          let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
          imageView.contentMode = .scaleAspectFit
@@ -74,9 +77,10 @@ class ChangeStateViewController: UIViewController,UITableViewDelegate,UITableVie
          case "North Carolina":
             rankstateToSend = "NC"
         default:
-             rankstateToSend = "MO"
+             rankstateToSend = "AL"
          }
         print (rankstateToSend)
+        stateName.thisState = rankstateToSend
         self.performSegue(withIdentifier:"changeStateRankings", sender: self)
      }
 

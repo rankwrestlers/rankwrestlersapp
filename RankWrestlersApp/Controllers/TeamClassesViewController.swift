@@ -24,9 +24,14 @@ class TeamClassesViewController: UIViewController,TeamClassesModelDelegate,UITab
     @IBOutlet weak var teamClassesLabel: UILabel!
 
     @IBOutlet weak var teamClassesMenu: UIBarButtonItem!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        rankstate = stateName.thisState
+    }
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        rankstate = stateName.thisState
 
         teamClassesViewController.delegate = self
         teamClassesViewController.dataSource = self

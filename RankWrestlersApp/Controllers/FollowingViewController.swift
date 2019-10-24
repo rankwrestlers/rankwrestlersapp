@@ -8,6 +8,12 @@
 
 import UIKit
 
+class StateName {
+    var thisState = "MO"
+}
+
+var stateName = StateName()
+
 class FollowingViewController: UIViewController, HomeModelDelegate, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
@@ -24,13 +30,16 @@ class FollowingViewController: UIViewController, HomeModelDelegate, UITableViewD
     
     var locations = [Location]()
  
-    var rankstate: String? = "MO"
+    var rankstate: String? = ""
+    
     
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        rankstate = stateName.thisState
+
         tableView.delegate = self
         tableView.dataSource = self
         

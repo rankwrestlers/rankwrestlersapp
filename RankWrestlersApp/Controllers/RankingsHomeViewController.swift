@@ -21,6 +21,10 @@ class RankingsHomeViewController: UIViewController,UITableViewDelegate,UITableVi
 
     var options = ["Class Rankings","Team Rankings","Grade Rankings","Pin Rankings"]
 
+    override func viewWillAppear(_ animated: Bool) {
+        rankstate = stateName.thisState
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))

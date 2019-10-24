@@ -21,15 +21,19 @@ class TeamsViewController: UIViewController,TeamsModelDelegate, UITableViewDataS
     var teamsModel = TeamsModel()
 
     var teams = [Team]()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        rankstate = stateName.thisState
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .percent
         numberFormatter.minimumFractionDigits = 1
         numberFormatter.maximumFractionDigits = 1
 
+        rankstate = stateName.thisState
         teamsViewController.delegate = self
         teamsViewController.dataSource = self
         teamsViewController.estimatedRowHeight = 20
@@ -54,6 +58,7 @@ class TeamsViewController: UIViewController,TeamsModelDelegate, UITableViewDataS
     }
     
     func ItemsDownloaded(teams: [Team]) {
+        rankstate = stateName.thisState
         self.teams = teams
         teamsViewController.reloadData()
     }

@@ -49,7 +49,8 @@ class ProfileViewController: UIViewController, MatchesModelDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        rankstate = stateName.thisState
+
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .percent
         numberFormatter.minimumFractionDigits = 1

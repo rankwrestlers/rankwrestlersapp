@@ -26,6 +26,7 @@ class TeamRankingsViewController: UIViewController,TeamRankingsModelDelegate,UIT
 
        override func viewDidLoad() {
            super.viewDidLoad()
+            rankstate = stateName.thisState
 
            teamRankingsLabel.text = "Class " + rankclass! + " Team Rankings"
            let numberFormatter = NumberFormatter()

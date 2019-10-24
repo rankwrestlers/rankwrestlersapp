@@ -22,6 +22,7 @@ class GradeRankingsViewController: UIViewController,GradeRankingsModelDelegate, 
 
         override func viewDidLoad() {
             super.viewDidLoad()
+            rankstate = stateName.thisState
 
             gradeLabel.text = grade! + " Rankings"
             switch grade {

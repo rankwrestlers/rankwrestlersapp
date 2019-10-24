@@ -17,6 +17,7 @@ class GradeOptionsViewController: UIViewController,UITableViewDelegate,UITableVi
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            rankstate = stateName.thisState
 
             let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
 

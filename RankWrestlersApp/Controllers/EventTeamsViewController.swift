@@ -27,6 +27,7 @@ class EventTeamsViewController: UIViewController,TeamsModelDelegate,UITableViewD
 
         override func viewDidLoad() {
             super.viewDidLoad()
+            rankstate = stateName.thisState
 
             let numberFormatter = NumberFormatter()
             numberFormatter.numberStyle = .percent

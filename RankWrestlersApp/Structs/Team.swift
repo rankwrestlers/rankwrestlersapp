@@ -12,4 +12,5 @@ struct Team {
     var school = ""
     var rankclass = ""
     var rankstate = ""
+    var chosen = false
 }

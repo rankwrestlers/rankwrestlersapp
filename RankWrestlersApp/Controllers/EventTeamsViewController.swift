@@ -16,18 +16,25 @@ class EventTeamsViewController: UIViewController,TeamsModelDelegate,UITableViewD
     
     @IBOutlet weak var eventTeamsButton: UIButton!
     @IBAction func next(_ sender: Any) {
+        var selectedSchools = teams.filter {
+            $0.chosen
+        }
+        let theseTeams = selectedSchools.map { $0.school }
+        print (theseTeams)
     }
 
         var school:String? = ""
         var rankstate:String? = ""
        
         var teamsModel = TeamsModel()
+        var packingList = [Team]()
 
         var teams = [Team]()
 
         override func viewDidLoad() {
             super.viewDidLoad()
             rankstate = stateName.thisState
+            eventTeamsViewController.allowsMultipleSelection = true
 
             let numberFormatter = NumberFormatter()
             numberFormatter.numberStyle = .percent
@@ -80,7 +87,24 @@ class EventTeamsViewController: UIViewController,TeamsModelDelegate,UITableViewD
             return cell
         }
 
-   
+   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       // Unselect the row, and instead, show the state with a checkmark.
+       tableView.deselectRow(at: indexPath, animated: false)
+       
+       guard let cell = tableView.cellForRow(at: indexPath) else { return }
+       
+       // Update the selected item to indicate whether the user packed it or not.
+       let item = teams[indexPath.row]
+       let newItem = Team(school: item.school, chosen: !item.chosen)
+       // Show a check mark next to packed items.
+       if newItem.chosen {
+           cell.accessoryType = .checkmark
+        teams[indexPath.row].chosen = true
+       } else {
+           cell.accessoryType = .none
+        teams[indexPath.row].chosen = false
+       }
+   }
 
  
     }

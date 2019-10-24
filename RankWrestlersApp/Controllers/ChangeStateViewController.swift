@@ -69,17 +69,110 @@ class ChangeStateViewController: UIViewController,UITableViewDelegate,UITableVie
     var rankstateToSend: String = ""
     
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         
+
         rankstateName = options[indexPath.row]
          switch rankstateName {
+         case "Alabama":
+             rankstateToSend = "AL"
          case "Alaska":
              rankstateToSend = "AK"
+         case "Arizona":
+             rankstateToSend = "AZ"
+         case "Arkansas":
+             rankstateToSend = "AR"
+         case "California":
+             rankstateToSend = "CA"
+         case "Colorado":
+             rankstateToSend = "CO"
+         case "Connecticut":
+             rankstateToSend = "CT"
+         case "Delaware":
+             rankstateToSend = "DE"
+         case "Florida":
+             rankstateToSend = "FL"
+         case "Georgia":
+             rankstateToSend = "GA"
+         case "Hawaii":
+             rankstateToSend = "HA"
+         case "Idaho":
+             rankstateToSend = "ID"
+         case "Illinois":
+             rankstateToSend = "IL"
+         case "Indiana":
+             rankstateToSend = "IN"
+         case "Iowa":
+             rankstateToSend = "IA"
+         case "Kansas":
+             rankstateToSend = "KS"
+         case "Kentucky":
+             rankstateToSend = "KY"
+         case "Louisiana":
+             rankstateToSend = "LA"
+         case "Maine":
+             rankstateToSend = "ME"
+         case "Maryland":
+             rankstateToSend = "MD"
+         case "Massachusetts":
+             rankstateToSend = "MA"
+         case "Michigan":
+             rankstateToSend = "MI"
+         case "Minnesota":
+             rankstateToSend = "MN"
+         case "Missouri":
+             rankstateToSend = "MO"
+         case "Montana":
+             rankstateToSend = "MT"
+         case "Nebraska":
+             rankstateToSend = "NE"
+         case "New Hampshire":
+             rankstateToSend = "NH"
+         case "Nevade":
+             rankstateToSend = "NV"
+         case "New Jersey":
+             rankstateToSend = "NJ"
+         case "New York":
+             rankstateToSend = "NY"
+         case "New Mexico":
+             rankstateToSend = "NM"
+         case "North Dakota":
+             rankstateToSend = "ND"
+         case "Ohio":
+             rankstateToSend = "OH"
+         case "Oklahoma":
+             rankstateToSend = "OK"
+         case "Oregon":
+             rankstateToSend = "OR"
+         case "Pennsylvania":
+             rankstateToSend = "PA"
+         case "Rhode Island":
+             rankstateToSend = "RI"
+         case "South Carolina":
+             rankstateToSend = "SC"
+         case "South Dakota":
+             rankstateToSend = "SD"
+         case "Tennessee":
+             rankstateToSend = "TN"
+         case "Texas":
+             rankstateToSend = "TX"
+         case "Utah":
+             rankstateToSend = "UT"
+         case "Vermont":
+             rankstateToSend = "VT"
+         case "West Virginia":
+             rankstateToSend = "WV"
          case "North Carolina":
             rankstateToSend = "NC"
+        case "Virginia":
+            rankstateToSend = "VA"
+        case "Washington":
+            rankstateToSend = "WA"
+        case "Wisconsin":
+            rankstateToSend = "WI"
+        case "Wyoming":
+            rankstateToSend = "WY"
         default:
              rankstateToSend = "AL"
          }
-        print (rankstateToSend)
         stateName.thisState = rankstateToSend
         self.performSegue(withIdentifier:"changeStateRankings", sender: self)
      }

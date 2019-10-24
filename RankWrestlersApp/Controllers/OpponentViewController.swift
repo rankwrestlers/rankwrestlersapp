@@ -158,5 +158,25 @@ class OpponentViewController: UIViewController,MatchesModelDelegate,OpponentsMod
          return cell
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         
+         if segue.identifier != "opponentMenuButton" {
 
+        let info = segue.destination as! OpponentViewController
+         info.opponent = opponentToSend
+        info.rankstate = rankstateToSend
+        }
+      }
+    
+     var opponentToSend: String = ""
+    var rankstateToSend: String = ""
+     
+     
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         opponentToSend = matches[indexPath.row].Opponent
+        rankstateToSend = rankstate!
+         
+         self.performSegue(withIdentifier: "opponentReload", sender: self)
+         
+     }
 }
